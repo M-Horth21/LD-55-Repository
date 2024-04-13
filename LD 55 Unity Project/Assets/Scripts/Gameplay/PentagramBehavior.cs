@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using TMPro;
+using UnityEngine.UI;
 
 public class PentagramBehavior : MonoBehaviour
 {
@@ -22,11 +23,6 @@ public class PentagramBehavior : MonoBehaviour
     [SerializeField] string sceneName;
 
     [SerializeField]
-    InputActionReference _clickAction;
-
-    [SerializeField] GameObject glow;
-
-    [SerializeField]
     TextMeshProUGUI _tipText;
 
     [SerializeField]
@@ -35,34 +31,40 @@ public class PentagramBehavior : MonoBehaviour
     [SerializeField]
     Difficulty _difficulty = Difficulty.Easy;
 
+    [SerializeField]
+    float _captureTime = 3;
+
+    [SerializeField]
+    Slider _progressSlider;
+
+    float _captureProgress = 0;
+    bool _capturing = false;
+
     private void Awake()
     {
-        glow.SetActive(false);
+        _tipText.text = $"Entering {_difficulty} level";
         _tipCanvas.SetActive(false);
-        _tipText.text = $"Press space to enter {_difficulty} level";
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        glow.SetActive(true);
-        _tipCanvas.gameObject.SetActive(true);
-        _clickAction.action.performed += HandleEnter;
+        _captureProgress = 0;
+        _capturing = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        glow.SetActive(false);
-        _tipCanvas.SetActive(false);
-        _clickAction.action.performed -= HandleEnter;
+        _capturing = false;
+        _captureProgress = 0;
     }
 
-    private void HandleEnter(InputAction.CallbackContext obj)
+    private void Update()
     {
-        SceneManager.LoadScene(sceneName);
-    }
+        if (!_capturing) return;
 
-    private void OnDisable()
-    {
-        _clickAction.action.performed -= HandleEnter;
+        _captureProgress += Time.deltaTime;
+        _progressSlider.value = _captureProgress / _captureTime;
+
+        if (_captureProgress >= _captureTime) SceneManager.LoadScene(sceneName);
     }
 }
