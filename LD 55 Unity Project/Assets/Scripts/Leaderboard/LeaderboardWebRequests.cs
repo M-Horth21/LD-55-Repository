@@ -173,13 +173,13 @@ public class LeaderboardWebRequests : Singleton<LeaderboardWebRequests>
         //OnNewIDGenerated.Invoke(webRequest.downloadHandler.text);
     }
 
-    public void SubmitScore()
+    public void SubmitScore(ulong runTime, string playerName = "unnamed")
     {
         string endPoint = $"{RootApiUrl}/scores/submit";
-        StartCoroutine(SubmitScoreCoroutine(endPoint));
+        StartCoroutine(SubmitScoreCoroutine(endPoint, runTime, playerName));
     }
 
-    IEnumerator SubmitScoreCoroutine(string uri)
+    IEnumerator SubmitScoreCoroutine(string uri, ulong runTime, string playerName)
     {
         var webRequest = new UnityWebRequest(uri, "POST");
 
@@ -187,8 +187,8 @@ public class LeaderboardWebRequests : Singleton<LeaderboardWebRequests>
         LeaderboardRecord submission = new()
         {
             id = SystemInfo.deviceUniqueIdentifier,
-            playerName = "unnamed",
-            runTime = 12345678,
+            playerName = playerName,
+            runTime = runTime,
             badge = "",
         };
 

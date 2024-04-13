@@ -6,11 +6,16 @@ using UnityEngine;
 
 public class LeaderboardTester : MonoBehaviour
 {
+    DateTime _runStartTime;
+    string _submissionPlayerName = "Enter player name";
+
     // Start is called before the first frame update
     void Start()
     {
         LeaderboardWebRequests.OnLeaderboardRecordsFetched -= HandleLeaderboardRecords;
         LeaderboardWebRequests.OnLeaderboardRecordsFetched += HandleLeaderboardRecords;
+
+        _runStartTime = DateTime.Now;
     }
 
     void HandleLeaderboardRecords(LeaderboardRecordList obj)
@@ -34,5 +39,17 @@ public class LeaderboardTester : MonoBehaviour
         {
             LeaderboardWebRequests.Instance.GetAllRecords();
         }
+
+        GUILayout.BeginHorizontal();
+
+        _submissionPlayerName = GUILayout.TextField(_submissionPlayerName);
+
+        if (GUILayout.Button("Submit a score"))
+        {
+            ulong runTime = (ulong)(DateTime.Now - _runStartTime).TotalMilliseconds;
+            LeaderboardWebRequests.Instance.SubmitScore(runTime, _submissionPlayerName);
+        }
+
+        GUILayout.EndHorizontal();
     }
 }
