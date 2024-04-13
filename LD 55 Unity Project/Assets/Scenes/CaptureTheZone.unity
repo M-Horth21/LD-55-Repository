@@ -176,9 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ability
-
-    2'
+  m_text: Sprint
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -553,7 +551,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 788740431}
         m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
         m_MethodName: CastAbility
         m_Mode: 3
@@ -616,7 +614,7 @@ GameObject:
   - component: {fileID: 454517924}
   - component: {fileID: 454517923}
   m_Layer: 5
-  m_Name: Ability Button 2 (2)
+  m_Name: Ability Button 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -686,14 +684,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 788740431}
         m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
         m_MethodName: CastAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -736,6 +734,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454517921}
   m_CullTransparentMesh: 1
+--- !u!1 &560285396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8998708282959845377, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+  m_PrefabInstance: {fileID: 788740430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &718105712
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +798,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Ability
 
-    2'
+    4'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -976,6 +979,26 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 44b200b1-1557-4083-816c-b22cbdf77ddf
     m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5ff6d47f-5fff-441f-a8a8-9ad4e3ed6a20
+    m_ActionName: 'Game/Ability3[/Keyboard/r,/Keyboard/3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 912f2cc0-1d48-4615-b479-4b9138942b4a
+    m_ActionName: 'Game/Ability4[/Keyboard/c,/Keyboard/4]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fbe5b4c4-961e-469c-92b4-4100b0119ba0
+    m_ActionName: 'Game/Ability5[/Keyboard/f,/Keyboard/5]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 97a0ed9e-7355-4f10-a57f-14253c72afe7
+    m_ActionName: 'Game/Ability6[/Keyboard/leftShift,/Keyboard/leftCtrl]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2033869c-c1ff-426a-abec-f1ecaef1961c
+    m_ActionName: 'Game/EnterLevel[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
@@ -1224,8 +1247,183 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8998708282959845377, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 788740438}
+    - targetCorrespondingSourceObject: {fileID: 8998708282959845377, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 788740437}
+    - targetCorrespondingSourceObject: {fileID: 8998708282959845377, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 788740436}
+    - targetCorrespondingSourceObject: {fileID: 8998708282959845377, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 788740435}
   m_SourcePrefab: {fileID: 100100000, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+--- !u!114 &788740431 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4655983790045222740, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+  m_PrefabInstance: {fileID: 788740430}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560285396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea10041b4afaef4aa7e06a86027d478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &788740435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560285396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96719bab357c3384baa66abc8bebb442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onActionPerformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 788740431}
+        m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
+        m_MethodName: CastAbility
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionReference: {fileID: -4244639387593795333, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
+  _newAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b7188036-c3ee-49ca-a7b1-7358c9a33bbb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _createNewAction: 0
+--- !u!114 &788740436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560285396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96719bab357c3384baa66abc8bebb442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onActionPerformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 788740431}
+        m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
+        m_MethodName: CastAbility
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionReference: {fileID: 8856287916604085716, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
+  _newAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b7188036-c3ee-49ca-a7b1-7358c9a33bbb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _createNewAction: 0
+--- !u!114 &788740437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560285396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96719bab357c3384baa66abc8bebb442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onActionPerformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 788740431}
+        m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
+        m_MethodName: CastAbility
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionReference: {fileID: 3918756922081690161, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
+  _newAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b7188036-c3ee-49ca-a7b1-7358c9a33bbb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _createNewAction: 0
+--- !u!114 &788740438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560285396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96719bab357c3384baa66abc8bebb442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onActionPerformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 788740431}
+        m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
+        m_MethodName: CastAbility
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionReference: {fileID: 2918566400553521831, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
+  _newAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b7188036-c3ee-49ca-a7b1-7358c9a33bbb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _createNewAction: 0
 --- !u!1 &793116522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1787,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 788740431}
         m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
         m_MethodName: CastAbility
         m_Mode: 3
@@ -1639,6 +1837,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841072143}
   m_CullTransparentMesh: 1
+--- !u!1 &1034244022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1034244025}
+  - component: {fileID: 1034244024}
+  - component: {fileID: 1034244023}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1034244023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034244022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1034244024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034244022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1034244025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034244022}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070537170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,7 +2118,7 @@ GameObject:
   - component: {fileID: 1398581862}
   - component: {fileID: 1398581861}
   m_Layer: 5
-  m_Name: Ability Button 2 (1)
+  m_Name: Ability Button 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1922,14 +2188,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 788740431}
         m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
         m_MethodName: CastAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2152,7 +2418,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Ability
 
-    2'
+    3'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2292,7 +2558,7 @@ GameObject:
   - component: {fileID: 1836878395}
   - component: {fileID: 1836878394}
   m_Layer: 5
-  m_Name: Ability Button 2 (3)
+  m_Name: Ability Button 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2362,14 +2628,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 788740431}
         m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
         m_MethodName: CastAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2584,7 +2850,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Ability
 
-    2'
+    5'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2676,7 +2942,7 @@ GameObject:
   - component: {fileID: 1968739953}
   - component: {fileID: 1968739952}
   m_Layer: 5
-  m_Name: Ability Button 2 (4)
+  m_Name: Sprint Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2746,14 +3012,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 788740431}
         m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
         m_MethodName: CastAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2917,3 +3183,4 @@ SceneRoots:
   - {fileID: 1443451695}
   - {fileID: 2007131952}
   - {fileID: 1610849744}
+  - {fileID: 1034244025}
