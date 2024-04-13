@@ -12,7 +12,7 @@ public class AgentMotion : MonoBehaviour
   [SerializeField]
   float _aimSpeed = 540;
 
-  Rigidbody2D _rigidbody;
+  Rigidbody _rigidbody;
 
   Vector2 _motionInput;
   public Vector2 MotionInput
@@ -28,14 +28,16 @@ public class AgentMotion : MonoBehaviour
     }
   }
 
-  Vector2 _aimInput = new Vector2(-1, 0);
-  public Vector2 AimInput
+  Vector3 _aimInput = new Vector3(-1, 0, 0);
+  public Vector3 AimInput
   {
     get { return _aimInput; }
     set
     {
-      _aimInput = value;
-    }
+      _aimInput.x = value.x;
+      _aimInput.y = 0;
+      _aimInput.z = value.z;
+        }
   }
 
   public Vector2 CurrentVelocity => _rigidbody.velocity;
@@ -43,24 +45,24 @@ public class AgentMotion : MonoBehaviour
   // Only fires once, even if object is re-enabled later.
   void Awake()
   {
-    _rigidbody = GetComponent<Rigidbody2D>();
+    _rigidbody = GetComponent<Rigidbody>();
   }
 
   void FixedUpdate()
   {
-    Vector2 targetVelocity = MotionInput * _baseSpeed;
+    Vector3 targetVelocity = new Vector3(MotionInput.x * _baseSpeed, 0, MotionInput.y * _baseSpeed);
 
-    _rigidbody.velocity = Vector2.MoveTowards(
+    _rigidbody.velocity = Vector3.MoveTowards(
       _rigidbody.velocity,
       targetVelocity,
       _acceleration * Time.fixedDeltaTime);
 
+
+
     // Aim input will be a world space coordinate to look at.
-    Vector2 lookVector = _aimInput - (Vector2)transform.position;
-    Quaternion lookRotation = Quaternion.RotateTowards(
-      transform.rotation,
-      Quaternion.LookRotation(Vector3.forward, lookVector),
-      _aimSpeed * Time.fixedDeltaTime);
+    Vector3 lookVector = _aimInput - transform.position;
+        lookVector.y = 0;
+    Quaternion lookRotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(lookVector, Vector3.up), _aimSpeed * Time.fixedDeltaTime);
     _rigidbody.MoveRotation(lookRotation);
   }
 }
