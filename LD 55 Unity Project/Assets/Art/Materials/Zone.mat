@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hover
-  m_Shader: {fileID: 4800000, guid: 5e8f8fd2c68f60a4286f68d1b4feef35, type: 3}
+  m_Name: Zone
+  m_Shader: {fileID: 4800000, guid: 2405db979e02ecb41aa150e4e5de82f3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -67,11 +67,13 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
-    - _FresnelExponent: 4
+    - _FresnelExponent: 1.32
+    - _FresnelIntensity: 7.74
+    - _FresnelProgress: 1
     - _GlossMapScale: 1
     - _Glossiness: 1
     - _GlossyReflections: 1
-    - _Intensity: 0.298
+    - _Intensity: 0.354
     - _Metallic: 0
     - _Mode: 3
     - _OcclusionStrength: 1

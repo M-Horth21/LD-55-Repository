@@ -1,4 +1,4 @@
-Shader "Custom/HoverGlow"
+Shader "Custom/Zone"
 {
     Properties
     {
@@ -12,6 +12,10 @@ Shader "Custom/HoverGlow"
 
         _FresnelColor ("Fresnel Color", Color) = (1,1,1,1)
         [PowerSlider(4)] _FresnelExponent ("Fresnel Exponent", Range(0.25, 4)) = 1
+        _FresnelIntensity("Fresnel Intensity", Range(0, 10)) = .5
+        _FresnelProgress("Fresnel Progress", Range(0, 1)) = 1
+
+
     }
     SubShader
     {
@@ -19,7 +23,7 @@ Shader "Custom/HoverGlow"
         Blend SrcAlpha OneMinusSrcAlpha
 
         LOD 200
-        Cull Off //disable backface culling
+        //Cull Off disable backface culling
 
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
@@ -46,6 +50,8 @@ Shader "Custom/HoverGlow"
 
         float3 _FresnelColor;
         float _FresnelExponent;
+        half _FresnelIntensity;
+        half _FresnelProgress;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -63,6 +69,19 @@ Shader "Custom/HoverGlow"
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
             o.Alpha = _Intensity;
+
+
+            // all the fresnel stuff
+            //get the dot product between the normal and the view direction
+            float fresnel = dot(IN.worldNormal, IN.viewDir);
+            //invert the fresnel so the big values are on the outside
+            fresnel = saturate(1 - fresnel);
+            //raise the fresnel value to the exponents power to be able to adjust it
+            fresnel = pow(fresnel, _FresnelExponent);
+            //combine the fresnel value with a color
+            float3 fresnelColor = fresnel * _FresnelColor;
+            //apply the fresnel value to the emission
+            o.Emission = _FresnelIntensity * fresnelColor * _FresnelProgress;
         }
         ENDCG
 
