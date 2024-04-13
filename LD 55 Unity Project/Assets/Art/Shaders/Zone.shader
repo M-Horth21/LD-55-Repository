@@ -9,7 +9,6 @@ Shader "Custom/Zone"
 
         _Intensity("Intensity", Range(0, 1)) = .5
 
-
         _FresnelColor ("Fresnel Color", Color) = (1,1,1,1)
         [PowerSlider(4)] _FresnelExponent ("Fresnel Exponent", Range(0.25, 4)) = 1
         _FresnelIntensity("Fresnel Intensity", Range(0, 10)) = .5
