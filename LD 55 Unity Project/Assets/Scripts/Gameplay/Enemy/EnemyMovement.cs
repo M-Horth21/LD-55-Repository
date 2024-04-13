@@ -10,14 +10,24 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] AgentMotion _agentMotion;
 
-   
     Vector3 target; // it's a global variable so I can draw it in the gizmos.
     void Update()
     {
 
         // 0 preference means the target pos is targeted. 1 means the player pos is targeted.
-        Vector3 resultant = (playerPos.position - targetPos.position);
-        target = targetPos.position + (preference * resultant);
+        Vector3 resultant;
+
+        // If no target position is given, just go straight for the player.
+        if(targetPos == null)
+        {
+            preference = 1;
+            target = playerPos.position;
+        }
+        else
+        {
+            resultant = (playerPos.position - targetPos.position);
+            target = targetPos.position + (preference * resultant);
+        }
 
         Vector2 moveDir = new Vector2(target.x - transform.position.x, target.z - transform.position.z).normalized;
         _agentMotion.MotionInput = moveDir;
@@ -27,8 +37,8 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(target, .5f);
-        Gizmos.DrawLine(Vector3.zero, playerPos.position);
-        Gizmos.DrawLine(Vector3.zero, targetPos.position);
+        //Gizmos.DrawSphere(target, .5f);
+        //Gizmos.DrawLine(Vector3.zero, playerPos.position);
+        //Gizmos.DrawLine(Vector3.zero, targetPos.position);
     }
 }
