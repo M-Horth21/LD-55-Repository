@@ -16,20 +16,20 @@ public class PlayerAimGamepadControls : MonoBehaviour
     if (stickDirection == Vector2.zero && _agentMotion.MotionInput == Vector2.zero)
     {
       _agentMotion.AimInput =
-        _agentMotion.transform.position + _agentMotion.transform.up;
+        _agentMotion.transform.position + _agentMotion.transform.forward;
     }
     else
     {
       if (stickDirection != Vector2.zero)
       {
         _agentMotion.AimInput =
-          _agentMotion.transform.position + (Vector3)stickDirection;
+          _agentMotion.transform.position + new Vector3(stickDirection.x, 0, stickDirection.y);
       }
       else
       {
         _agentMotion.AimInput =
-          _agentMotion.transform.position + (Vector3)_agentMotion.MotionInput;
-      }
+          _agentMotion.transform.position + new Vector3(_agentMotion.MotionInput.x, 0, _agentMotion.MotionInput.y);
+            }
     }
   }
 }
