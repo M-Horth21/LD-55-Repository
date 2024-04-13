@@ -52,7 +52,7 @@ public class WallAbility : IAbility
     }
     public void Deactivate()
     {
-        currRecharge = 0f;
+        currRecharge = (_recharge * rechargeTime);
         recharging = true;
         active = false;
     }

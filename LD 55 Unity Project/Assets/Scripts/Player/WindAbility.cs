@@ -57,7 +57,7 @@ public class WindAbility : IAbility
     }
     public void Deactivate()
     {
-
+        currRecharge = (_recharge * rechargeTime);
         recharging = true;
         active = false;
     }

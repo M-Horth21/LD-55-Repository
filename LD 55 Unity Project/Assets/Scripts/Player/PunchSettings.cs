@@ -6,5 +6,6 @@ using UnityEngine;
 public class PunchSettings : ScriptableObject
 {
     [SerializeField] public float rechargeTime;
+    [SerializeField] public float abilityTime;
     [SerializeField] public GameObject punchPrefab;
 }

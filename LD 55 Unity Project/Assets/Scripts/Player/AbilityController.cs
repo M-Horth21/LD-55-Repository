@@ -6,17 +6,24 @@ using UnityEngine.UI;
 
 public class AbilityController : MonoBehaviour
 {
+    [SerializeField] InputActionReference mouseHold;
+    [SerializeField] Transform playerCursor;
+
+    [Header("")]
+
     [Header("UI Charge Indicators")]
+    [SerializeField] RectTransform punchIndicator;
     [SerializeField] RectTransform windIndicator;
     [SerializeField] RectTransform wallIndicator;
 
+    [Header("")]
+    [Header("UI Selected Indicator")]
+    [SerializeField] List<RectTransform> abilityPositions = new List<RectTransform>();
+    [SerializeField] RectTransform selectionHover;
 
 
-    [SerializeField] InputActionReference mouseHold;
 
-    [SerializeField] Transform playerCursor;
-
-
+    [Header("")]
     [Header("Ability Settings")]
 
     [SerializeField] PunchSettings punchSettings;
@@ -29,6 +36,8 @@ public class AbilityController : MonoBehaviour
 
 
     List<IAbility> abilities = new List<IAbility>();
+
+    private int abilityIndex = -1;
 
     private void Awake()
     {
@@ -44,7 +53,7 @@ public class AbilityController : MonoBehaviour
     // Null ability exists so I don't have to do a null check when deactivating.
     IAbility currAbility = new NullAbility();
 
-    public void CastAbility(int abilityNumber)
+    private void CastAbility(int abilityNumber)
     {
         switch (abilityNumber)
         {
@@ -87,22 +96,35 @@ public class AbilityController : MonoBehaviour
 
         windIndicator.localScale = new Vector3(windIndicator.localScale.x, windAbility.recharge, windIndicator.localScale.z);
         wallIndicator.localScale = new Vector3(windIndicator.localScale.x, wallAbility.recharge, windIndicator.localScale.z);
+        punchIndicator.localScale = new Vector3(punchIndicator.localScale.x, punchAbility.recharge, punchIndicator.localScale.z);
+
 
         currAbility.Logic(playerCursor.position);
     }
 
-
-
+    public void SetCurrAbility(int ability)
+    {
+        abilityIndex = ability;
+        selectionHover.transform.position = abilityPositions[ability - 1].position;
+    }
 
     private void OnEnable()
     {
         mouseHold.action.canceled += CancelAbility;
+        mouseHold.action.started += StartAbility;
 
     }
+
     private void OnDisable()
     {
         mouseHold.action.canceled -= CancelAbility;
+        mouseHold.action.started -= StartAbility;
 
+    }
+
+    private void StartAbility(InputAction.CallbackContext obj)
+    {
+        CastAbility(abilityIndex);
     }
 
     private void CancelAbility(InputAction.CallbackContext obj)

@@ -16,30 +16,46 @@ public class PunchAbility : IAbility
         }
     }
 
+    float rechargeTime;
+    float abilityTime;
+
+
+    float currRecharge;
     bool recharging = false;
     bool active = false;
 
-    float rechargeTime;
-
-    float currRecharge = 0;
     public PunchAbility(PunchSettings punchSettings)
     {
         this.punchObject = punchSettings.punchPrefab;
         this.rechargeTime = punchSettings.rechargeTime;
+        this.abilityTime = punchSettings.abilityTime;
+        _recharge = 1;
+        currRecharge = abilityTime;
+
     }
     public void Activate()
     {
+        if (active) return;
+
+        currRecharge = abilityTime;
+
         active = true;
         recharging = false;
     }
     public void Logic(Vector3 mousePos)
     {
-        // nothing here for punch. It's a single frame action.
+        if (!active) return;
+
+        if (currRecharge < .01)
+        {
+            Deactivate();
+        }
     }
     public void Deactivate()
     {
-        active = false;
+        currRecharge = (_recharge * rechargeTime);
         recharging = true;
+        active = false;
     }
     public void Tick()
     {
@@ -47,12 +63,12 @@ public class PunchAbility : IAbility
         {
             _recharge = Mathf.Clamp01(currRecharge / rechargeTime);
             currRecharge += Time.deltaTime;
-            if (_recharge >= .98f) recharging = false;
+            if (_recharge >= 1f) recharging = false;
         }
-        else if(active)
+        else if (active)
         {
-
-            // this means we're either active or charged. 
+            _recharge = Mathf.Clamp01(currRecharge / abilityTime);
+            currRecharge -= Time.deltaTime;
         }
     }
 
