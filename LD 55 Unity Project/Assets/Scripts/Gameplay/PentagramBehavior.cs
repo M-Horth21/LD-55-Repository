@@ -7,6 +7,7 @@ using System;
 
 public class PentagramBehavior : MonoBehaviour
 {
+    [Scene]
     [SerializeField] string sceneName;
 
     [SerializeField]
@@ -26,6 +27,7 @@ public class PentagramBehavior : MonoBehaviour
         {
             clicked = true;
             Debug.Log("test");
+            SceneManager.LoadScene(sceneName);
         }
     }
     private void OnTriggerExit(Collider other)
