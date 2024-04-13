@@ -22,7 +22,7 @@ public class InputActionTrigger : MonoBehaviour
   {
     if (Action == null) return;
 
-    Action.Enable();
+    //Action.Enable();
     Action.performed -= HandleActionPerformed;
     Action.performed += HandleActionPerformed;
   }
