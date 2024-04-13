@@ -8,6 +8,9 @@ using TMPro;
 
 public class PentagramBehavior : MonoBehaviour
 {
+    /// <summary>
+    /// This likely gets replaced with scriptable object configuration later.
+    /// </summary>
     enum Difficulty
     {
         Easy,
@@ -56,5 +59,10 @@ public class PentagramBehavior : MonoBehaviour
     private void HandleEnter(InputAction.CallbackContext obj)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    private void OnDisable()
+    {
+        _clickAction.action.performed -= HandleEnter;
     }
 }
