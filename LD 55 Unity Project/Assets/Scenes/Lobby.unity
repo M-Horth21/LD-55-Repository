@@ -2457,7 +2457,19 @@ MonoBehaviour:
       m_Calls: []
   m_ControlsChangedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2894342300151855774}
+        m_TargetAssemblyTypeName: PlayerAimInputController, Assembly-CSharp
+        m_MethodName: HandleControlsChangedEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
@@ -3974,6 +3986,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+--- !u!114 &2894342300151855774 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8824187548067482543, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+  m_PrefabInstance: {fileID: 2894342300151855773}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40bac660f5ec0e408afad95dd81ddc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &3469287837455414323
 MeshFilter:
   m_ObjectHideFlags: 0

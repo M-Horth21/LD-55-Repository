@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af47c7770874a649bee7d117a3f1ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
-  _clickAction: {fileID: 8589221937481295238, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
+  sceneName: CaptureTheZone
+  _clickAction: {fileID: 7252088112006788650, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
   glow: {fileID: 5547266591162363278}
 --- !u!1 &5547266591162363278
 GameObject:
