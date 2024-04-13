@@ -15,23 +15,20 @@ public class PentagramBehavior : MonoBehaviour
 
     [SerializeField] GameObject glow;
 
-    private bool clicked = false;
     private void OnTriggerEnter(Collider other)
     {
         glow.SetActive(true);
+        _clickAction.action.performed += HandleEnter;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (!clicked && _clickAction.action.ReadValue<float>() > 0)
-        {
-            clicked = true;
-            Debug.Log("test");
-            SceneManager.LoadScene(sceneName);
-        }
-    }
     private void OnTriggerExit(Collider other)
     {
         glow.SetActive(false);
+        _clickAction.action.performed -= HandleEnter;
+    }
+
+    private void HandleEnter(InputAction.CallbackContext obj)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
