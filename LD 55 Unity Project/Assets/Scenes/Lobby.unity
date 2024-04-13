@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -184,6 +188,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 90026844}
     m_Modifications:
+    - target: {fileID: 26598483393418370, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: _difficulty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 643497076408054867, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_Name
       value: Pentagram (8)
@@ -227,6 +235,10 @@ PrefabInstance:
     - target: {fileID: 3084030720095227913, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -379,6 +391,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 90026844}
     m_Modifications:
+    - target: {fileID: 26598483393418370, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: _difficulty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 643497076408054867, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_Name
       value: Pentagram (6)
@@ -422,6 +438,10 @@ PrefabInstance:
     - target: {fileID: 3084030720095227913, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1258,6 +1278,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 90026844}
     m_Modifications:
+    - target: {fileID: 26598483393418370, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: _difficulty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 643497076408054867, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_Name
       value: Pentagram (9)
@@ -1301,6 +1325,10 @@ PrefabInstance:
     - target: {fileID: 3084030720095227913, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1363,6 +1391,10 @@ PrefabInstance:
     - target: {fileID: 3084030720095227913, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1616,6 +1648,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 522359748}
     m_Modifications:
+    - target: {fileID: 26598483393418370, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: _difficulty
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 643497076408054867, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_Name
       value: HardPortal
@@ -1659,6 +1695,10 @@ PrefabInstance:
     - target: {fileID: 3084030720095227913, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1974,6 +2014,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 90026844}
     m_Modifications:
+    - target: {fileID: 26598483393418370, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: _difficulty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 643497076408054867, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_Name
       value: Pentagram (10)
@@ -2017,6 +2061,10 @@ PrefabInstance:
     - target: {fileID: 3084030720095227913, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3564,6 +3612,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3621,6 +3673,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3634,6 +3690,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 90026844}
     m_Modifications:
+    - target: {fileID: 26598483393418370, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: _difficulty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 643497076408054867, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_Name
       value: Pentagram (7)
@@ -3677,6 +3737,10 @@ PrefabInstance:
     - target: {fileID: 3084030720095227913, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4151,6 +4215,10 @@ PrefabInstance:
     - target: {fileID: 3084030720095227913, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234152203837812445, guid: f17b65a111b657b409261ea23f1c3380, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
