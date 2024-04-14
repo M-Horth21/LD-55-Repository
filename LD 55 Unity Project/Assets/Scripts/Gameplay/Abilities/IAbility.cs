@@ -10,3 +10,11 @@ public interface IAbility
     public void Tick();
     public float recharge { get; }
 }
+
+public enum AbilityType
+{
+    Dash,
+    Punch,
+    Wind,
+    Wall
+}
