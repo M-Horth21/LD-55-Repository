@@ -50,7 +50,7 @@ public class AbilityController : MonoBehaviour
 
     List<IAbility> abilities = new List<IAbility>();
 
-    private int numAbilities = 5;
+    private int numAbilities = 4;
 
     private int abilityIndex = 1;
 
