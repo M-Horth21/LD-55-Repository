@@ -42,6 +42,8 @@ public class WallAbility : IAbility
     {
         if (active) return;
 
+        AudioManager.instance.PlaySound("WallBuild");
+
         currRecharge = abilityTime;
 
 
@@ -72,6 +74,8 @@ public class WallAbility : IAbility
     }
     public void Deactivate()
     {
+        AudioManager.instance.StopSound("WallBuild");
+
         currRecharge = (_recharge * rechargeTime);
         recharging = true;
         active = false;
