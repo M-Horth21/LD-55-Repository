@@ -1,24 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using System;
 using TMPro;
 using UnityEngine.UI;
 
-public class PentagramBehavior : MonoBehaviour
+public partial class PentagramBehavior : MonoBehaviour
 {
-    /// <summary>
-    /// This likely gets replaced with scriptable object configuration later.
-    /// </summary>
-    enum Difficulty
-    {
-        Easy,
-        Medium,
-        Hard
-    }
-
     [Scene]
     [SerializeField] string sceneName;
 
@@ -29,13 +15,19 @@ public class PentagramBehavior : MonoBehaviour
     GameObject _tipCanvas;
 
     [SerializeField]
-    Difficulty _difficulty = Difficulty.Easy;
+    DifficultySetting _difficulty = DifficultySetting.Easy;
 
     [SerializeField]
     float _captureTime = 3;
 
     [SerializeField]
     Slider _progressSlider;
+
+    [SerializeField]
+    int _portalId = 0;
+
+    [SerializeField]
+    GameState _gameState;
 
     float _captureProgress = 0;
     bool _capturing = false;
@@ -65,6 +57,12 @@ public class PentagramBehavior : MonoBehaviour
         _captureProgress += Time.deltaTime;
         _progressSlider.value = _captureProgress / _captureTime;
 
-        if (_captureProgress >= _captureTime) SceneManager.LoadScene(sceneName);
+        if (_captureProgress >= _captureTime)
+        {
+            _gameState.BeginPortal(PortalId, _difficulty);
+            SceneManager.LoadScene(sceneName);
+        }
     }
+
+    public int PortalId => _portalId;
 }
