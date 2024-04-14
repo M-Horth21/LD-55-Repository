@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public partial class PentagramBehavior : MonoBehaviour
 {
+
     [Scene]
     [SerializeField] string sceneName;
 
@@ -32,6 +33,7 @@ public partial class PentagramBehavior : MonoBehaviour
     float _captureProgress = 0;
     bool _capturing = false;
 
+
     private void Awake()
     {
         _tipText.text = $"Entering {_difficulty} level";
@@ -49,6 +51,7 @@ public partial class PentagramBehavior : MonoBehaviour
         _capturing = false;
         _captureProgress = 0;
     }
+
 
     private void Update()
     {

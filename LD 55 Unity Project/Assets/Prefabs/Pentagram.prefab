@@ -109,7 +109,7 @@ MonoBehaviour:
   _difficulty: 0
   _captureTime: 3
   _progressSlider: {fileID: 2045445049848302834}
-  PortalId: 0
+  _portalId: 0
   _gameState: {fileID: 11400000, guid: 01f52473979437742a4a39ba9cf86070, type: 2}
 --- !u!136 &4856401981659810056
 CapsuleCollider:
@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 6379262102092848895}
   - component: {fileID: 8147619956372231160}
   - component: {fileID: 8455724734971247845}
+  - component: {fileID: 7680451217574045794}
   m_Layer: 0
   m_Name: Indicator Sensor
   m_TagString: Untagged
@@ -501,7 +502,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4.12
+  m_Radius: 5.72
   m_Height: 13.95
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -547,6 +548,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7680451217574045794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4267650521485763512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d776ede0f9fff45a8a5451b9dcff5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  glowRenderer: {fileID: 1231144349687292411}
 --- !u!1 &5547266591162363278
 GameObject:
   m_ObjectHideFlags: 0
