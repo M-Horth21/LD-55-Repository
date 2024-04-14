@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,6 +41,8 @@ public class AbilityController : MonoBehaviour
 
 
     List<IAbility> abilities = new List<IAbility>();
+
+    private int numAbilities = 5;
 
     private int abilityIndex = 1;
 
@@ -106,6 +109,30 @@ public class AbilityController : MonoBehaviour
 
     private void Update()
     {
+
+        Vector2 scrollVec = Mouse.current.scroll.ReadValue();
+        float scroll = scrollVec.y;
+
+        if(scroll < 0)
+        {
+            if(abilityIndex == 1)
+            {
+                SetCurrAbility(numAbilities);
+            }
+            else
+            {
+                SetCurrAbility(((abilityIndex) % numAbilities) - 1);
+
+            }
+        }
+        else if(scroll > 0)
+        {
+            SetCurrAbility(((abilityIndex) % numAbilities) + 1);
+
+        }
+
+        Debug.Log(abilityIndex);
+
         foreach(IAbility ability in abilities)
         {
             ability.Tick();
@@ -157,5 +184,10 @@ public class AbilityController : MonoBehaviour
     {
         currAbility.Deactivate();
         currAbility = new NullAbility();
+    }
+
+    static int MathMod(int a, int b)
+    {
+        return (Math.Abs(a * b) + a) % b;
     }
 }
