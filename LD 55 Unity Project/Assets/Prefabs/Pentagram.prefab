@@ -109,6 +109,8 @@ MonoBehaviour:
   _difficulty: 0
   _captureTime: 3
   _progressSlider: {fileID: 2045445049848302834}
+  PortalId: 0
+  _gameState: {fileID: 11400000, guid: 01f52473979437742a4a39ba9cf86070, type: 2}
 --- !u!136 &4856401981659810056
 CapsuleCollider:
   m_ObjectHideFlags: 0
