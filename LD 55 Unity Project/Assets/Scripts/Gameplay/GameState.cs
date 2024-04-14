@@ -9,8 +9,15 @@ public class GameState : ScriptableObject
     public DifficultySetting CurrentDifficulty { get; private set; }
     public List<int> CompletedPortals => _completedPortals;
     public int NumberOfCompletedPortals => CompletedPortals.Count;
-
     public TimeSpan RunTime => _runEndTime - _runStartTime;
+
+    [Scene]
+    [SerializeField]
+    List<string> _sceneOrder = new List<string>();
+
+    [Scene]
+    [SerializeField]
+    string _finalScene;
 
     int _currentPortal = -1;
     List<int> _completedPortals = new();
@@ -52,4 +59,12 @@ public class GameState : ScriptableObject
     public void LevelUpAbility(AbilityType ability) => _abilityRanks[ability]++;
 
     public void CompleteRun() => _runEndTime = DateTime.Now;
+
+    public string GetNextScene()
+    {
+        if (CurrentDifficulty == DifficultySetting.Hard) return _finalScene;
+
+        var sceneIndex = NumberOfCompletedPortals % _sceneOrder.Count;
+        return _sceneOrder[sceneIndex];
+    }
 }

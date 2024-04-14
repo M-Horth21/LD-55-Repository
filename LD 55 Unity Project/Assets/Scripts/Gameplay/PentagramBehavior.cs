@@ -5,10 +5,6 @@ using UnityEngine.UI;
 
 public partial class PentagramBehavior : MonoBehaviour
 {
-
-    [Scene]
-    [SerializeField] string sceneName;
-
     [SerializeField]
     TextMeshProUGUI _tipText;
 
@@ -63,7 +59,7 @@ public partial class PentagramBehavior : MonoBehaviour
         if (_captureProgress >= _captureTime)
         {
             _gameState.BeginPortal(PortalId, _difficulty);
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(_gameState.GetNextScene());
         }
     }
 
