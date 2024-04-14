@@ -10,8 +10,7 @@ public class GameState : ScriptableObject
     public List<int> CompletedPortals => _completedPortals;
     public int NumberOfCompletedPortals => CompletedPortals.Count;
 
-    public ulong RunTime =>
-        (ulong)(_runEndTime - _runStartTime).TotalMilliseconds;
+    public TimeSpan RunTime => _runEndTime - _runStartTime;
 
     int _currentPortal = -1;
     List<int> _completedPortals = new();
@@ -20,9 +19,12 @@ public class GameState : ScriptableObject
     DateTime _runStartTime;
     DateTime _runEndTime;
 
+    [ContextMenu("Initialize")]
     public void Initialize()
     {
         _completedPortals.Clear();
+        _abilityRanks.Clear();
+
         _currentPortal = -1;
 
         foreach (AbilityType type in Enum.GetValues(typeof(AbilityType)))
