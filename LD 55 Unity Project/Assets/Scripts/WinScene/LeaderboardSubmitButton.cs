@@ -9,6 +9,16 @@ public class LeaderboardSubmitButton : MonoBehaviour
     [SerializeField]
     TMP_InputField _nameInput;
 
+    void OnEnable()
+    {
+        LeaderboardWebRequests.OnScoreSubmitted += HandleScoreSubmitted;
+    }
+
+    void OnDisable()
+    {
+        LeaderboardWebRequests.OnScoreSubmitted -= HandleScoreSubmitted;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +36,12 @@ public class LeaderboardSubmitButton : MonoBehaviour
     void SubmitScore()
     {
         LeaderboardWebRequests.Instance.SubmitScore(_nameInput.text);
+    }
+
+    void HandleScoreSubmitted()
+    {
+        LeaderboardWebRequests.Instance.GetAllRecords();
+        _nameInput.text = string.Empty;
     }
 
     void SetButtonActive(bool active) => gameObject.SetActive(active);
