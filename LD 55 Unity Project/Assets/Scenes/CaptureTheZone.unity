@@ -176,7 +176,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sprint
+  m_text: 'Dash
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -740,6 +742,78 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8998708282959845377, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
   m_PrefabInstance: {fileID: 788740430}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &640310918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 640310919}
+  - component: {fileID: 640310921}
+  - component: {fileID: 640310920}
+  m_Layer: 5
+  m_Name: ChargeIndicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &640310919
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640310918}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1968739951}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &640310920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640310918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.41037738, g: 1, b: 0.56430453, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &640310921
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640310918}
+  m_CullTransparentMesh: 1
 --- !u!1 &640873341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,7 +1349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1562019349961280680, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4485773
+      value: -12.4
       objectReference: {fileID: 0}
     - target: {fileID: 1562019349961280680, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1283,7 +1357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1562019349961280680, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.113486
+      value: -8.44
       objectReference: {fileID: 0}
     - target: {fileID: 1562019349961280680, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1322,6 +1396,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8589221937481295238, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
     - target: {fileID: 4655983790045222740, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+      propertyPath: dashSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: d94f1e80d16e83345b150f3609d4130c, type: 2}
+    - target: {fileID: 4655983790045222740, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
       propertyPath: playerCursor
       value: 
       objectReference: {fileID: 769621506}
@@ -1333,6 +1411,10 @@ PrefabInstance:
       propertyPath: windSettings
       value: 
       objectReference: {fileID: 11400000, guid: 3f9c2cc7744e82b478ed9eae42317f31, type: 2}
+    - target: {fileID: 4655983790045222740, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+      propertyPath: dashIndicator
+      value: 
+      objectReference: {fileID: 640310919}
     - target: {fileID: 4655983790045222740, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
       propertyPath: punchSettings
       value: 
@@ -1353,6 +1435,10 @@ PrefabInstance:
       propertyPath: selectionHover
       value: 
       objectReference: {fileID: 1957659744}
+    - target: {fileID: 4655983790045222740, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1853802056}
     - target: {fileID: 4655983790045222740, guid: fd117e800321da04f8441a52c2afbc97, type: 3}
       propertyPath: abilityPositions.Array.size
       value: 6
@@ -3325,7 +3411,7 @@ GameObject:
   - component: {fileID: 1968739953}
   - component: {fileID: 1968739952}
   m_Layer: 5
-  m_Name: Sprint Button
+  m_Name: Dash Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3343,6 +3429,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 640310919}
   - {fileID: 161074683}
   m_Father: {fileID: 2007131952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

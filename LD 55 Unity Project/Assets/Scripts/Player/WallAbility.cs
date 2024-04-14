@@ -41,7 +41,7 @@ public class WallAbility : IAbility
         active = true;
         recharging = false;
     }
-    public void Logic(Vector3 mousePos)
+    public void Logic(Vector3 startPos, Vector3 targetPos)
     {
         if (!active) return;
 

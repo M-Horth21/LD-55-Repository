@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class WindAbility : IAbility
@@ -14,6 +15,8 @@ public class WindAbility : IAbility
             return _recharge;
         }
     }
+
+    GameObject currWind;
 
     float rechargeTime;
     float abilityTime;
@@ -37,18 +40,22 @@ public class WindAbility : IAbility
             return;
         }
 
+        currWind = GameObject.Instantiate(windPrefab);
 
         currRecharge = abilityTime;
 
         active = true;
         recharging = false;
     }
-    public void Logic(Vector3 mousePos)
+    public void Logic(Vector3 startPos, Vector3 targetPos)
     {
         if (!active)
         {
             return;
         }
+
+        currWind.transform.position = startPos;
+        currWind.transform.rotation = Quaternion.LookRotation(targetPos - startPos);
 
         if (currRecharge < .01)
         {
@@ -57,6 +64,7 @@ public class WindAbility : IAbility
     }
     public void Deactivate()
     {
+        GameObject.Destroy(currWind);
         currRecharge = (_recharge * rechargeTime);
         recharging = true;
         active = false;

@@ -8,6 +8,7 @@ public class AbilityController : MonoBehaviour
 {
     [SerializeField] InputActionReference mouseHold;
     [SerializeField] Transform playerCursor;
+    [SerializeField] Transform playerTransform;
 
     [Header("")]
 
@@ -15,6 +16,7 @@ public class AbilityController : MonoBehaviour
     [SerializeField] RectTransform punchIndicator;
     [SerializeField] RectTransform windIndicator;
     [SerializeField] RectTransform wallIndicator;
+    [SerializeField] RectTransform dashIndicator;
 
     [Header("")]
     [Header("UI Selected Indicator")]
@@ -29,25 +31,30 @@ public class AbilityController : MonoBehaviour
     [SerializeField] PunchSettings punchSettings;
     [SerializeField] WindSettings windSettings;
     [SerializeField] WallSettings wallSettings;
+    [SerializeField] DashSettings dashSettings;
 
     PunchAbility punchAbility;
     WindAbility windAbility;
     WallAbility wallAbility;
+    DashAbility dashAbility;
 
 
     List<IAbility> abilities = new List<IAbility>();
 
-    private int abilityIndex = -1;
+    private int abilityIndex = 1;
 
     private void Awake()
     {
         punchAbility = new PunchAbility(punchSettings);
         windAbility = new WindAbility(windSettings);
         wallAbility = new WallAbility(wallSettings);
+        dashAbility = new DashAbility(dashSettings, playerTransform.gameObject.GetComponent<Rigidbody>());
+
 
         abilities.Add(punchAbility);
         abilities.Add(windAbility);
         abilities.Add(wallAbility);
+        abilities.Add(dashAbility);
     }
 
     // Null ability exists so I don't have to do a null check when deactivating.
@@ -55,6 +62,16 @@ public class AbilityController : MonoBehaviour
 
     private void CastAbility(int abilityNumber)
     {
+        if(abilityNumber == 6)
+        {
+            if (dashAbility.recharge < .99f) return;
+
+            Debug.Log("Dashing");
+            dashAbility.Activate();
+
+            return;
+        }
+
         switch (abilityNumber)
         {
             case 1:
@@ -97,14 +114,24 @@ public class AbilityController : MonoBehaviour
         windIndicator.localScale = new Vector3(windIndicator.localScale.x, windAbility.recharge, windIndicator.localScale.z);
         wallIndicator.localScale = new Vector3(windIndicator.localScale.x, wallAbility.recharge, windIndicator.localScale.z);
         punchIndicator.localScale = new Vector3(punchIndicator.localScale.x, punchAbility.recharge, punchIndicator.localScale.z);
+        dashIndicator.localScale = new Vector3(dashIndicator.localScale.x, dashAbility.recharge, dashIndicator.localScale.z);
 
 
-        currAbility.Logic(playerCursor.position);
+        currAbility.Logic(playerTransform.position, playerCursor.position);
     }
 
     public void SetCurrAbility(int ability)
     {
+        // dash ability. Do this one immediately and don't cancel other abilities.
+        if(ability == 6)
+        {
+            CastAbility(ability);
+            return;
+        }
+
+
         abilityIndex = ability;
+
         selectionHover.transform.position = abilityPositions[ability - 1].position;
     }
 

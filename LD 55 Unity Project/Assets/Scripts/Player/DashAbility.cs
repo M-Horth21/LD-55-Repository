@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PunchAbility : IAbility
+public class DashAbility : IAbility
 {
-    GameObject punchObject;
-
+    GameObject dashPrefab;
+    Rigidbody playerRB;
+    float dashForce;
 
     private float _recharge;
-    public float recharge {
+    public float recharge
+    {
         get
         {
             return _recharge;
@@ -24,11 +26,13 @@ public class PunchAbility : IAbility
     bool recharging = false;
     bool active = false;
 
-    public PunchAbility(PunchSettings punchSettings)
+    public DashAbility(DashSettings dashSettings, Rigidbody playerRB)
     {
-        this.punchObject = punchSettings.punchPrefab;
-        this.rechargeTime = punchSettings.rechargeTime;
-        this.abilityTime = punchSettings.abilityTime;
+        this.dashForce = dashSettings.dashForce;
+        this.dashPrefab = dashSettings.dashPrefab;
+        this.rechargeTime = dashSettings.rechargeTime;
+        this.abilityTime = dashSettings.abilityTime;
+        this.playerRB = playerRB;
         _recharge = 1;
         currRecharge = abilityTime;
 
@@ -41,6 +45,10 @@ public class PunchAbility : IAbility
 
         active = true;
         recharging = false;
+
+        playerRB.AddForce(playerRB.velocity.normalized * dashForce, ForceMode.VelocityChange);
+
+        Deactivate();
     }
     public void Logic(Vector3 startPos, Vector3 targetPos)
     {
@@ -53,12 +61,12 @@ public class PunchAbility : IAbility
     }
     public void Deactivate()
     {
-        currRecharge = (_recharge * rechargeTime);
         recharging = true;
         active = false;
     }
     public void Tick()
     {
+        Debug.Log("dash ticking");
         if (recharging)
         {
             _recharge = Mathf.Clamp01(currRecharge / rechargeTime);
