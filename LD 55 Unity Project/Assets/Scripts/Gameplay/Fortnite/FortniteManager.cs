@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,14 @@ public class FortniteManager : MonoBehaviour
     string _lobbyScene;
 
     [SerializeField] List<GameObject> enemies;
+
+    void Start()
+    {
+        for (int i = enemies.Count - 1; i >= 0; i--)
+        {
+            if (!enemies[i].activeInHierarchy) enemies.RemoveAt(i);
+        }
+    }
 
     private void Update()
     {
@@ -35,4 +44,10 @@ public class FortniteManager : MonoBehaviour
 
     }
 
+    public void HandleEnemyKilled(GameObject gameObject)
+    {
+        enemies.Remove(gameObject);
+
+        if (enemies.Count == 0) Win();
+    }
 }

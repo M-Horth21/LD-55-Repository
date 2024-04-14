@@ -16,6 +16,7 @@ public class Storm : MonoBehaviour
         }
         if ((enemyLayer & (1 << other.gameObject.layer)) != 0)
         {
+            manager.HandleEnemyKilled(other.gameObject);
             Destroy(other.gameObject);
         }
     }
