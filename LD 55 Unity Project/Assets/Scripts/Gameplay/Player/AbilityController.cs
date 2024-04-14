@@ -113,13 +113,13 @@ public class AbilityController : MonoBehaviour
         Vector2 scrollVec = Mouse.current.scroll.ReadValue();
         float scroll = scrollVec.y;
 
-        if (scroll < 0)
+        if (scroll > 0)
         {
             var nextAbility = abilityIndex - 1;
             if (nextAbility == 0) nextAbility += numAbilities;
             SetCurrAbility(nextAbility);
         }
-        else if (scroll > 0)
+        else if (scroll < 0)
         {
             SetCurrAbility(((abilityIndex) % numAbilities) + 1);
 
