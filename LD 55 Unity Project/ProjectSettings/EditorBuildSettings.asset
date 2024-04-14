@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 988a5900f0430fe4892b2d71145f7d16
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: e849c70230bfff04d93f394efa4b4544
+  - enabled: 1
     path: Assets/Scenes/CaptureTheZone.unity
     guid: 4c6d175cd6376bf49a7be5dafa336080
   - enabled: 1
     path: Assets/Scenes/Fortnite.unity
     guid: f1a420fd7d0eabc4993451dba48dfc32
-  - enabled: 1
-    path: Assets/Scenes/Lobby.unity
-    guid: e849c70230bfff04d93f394efa4b4544
   - enabled: 1
     path: Assets/Scenes/MarioParty.unity
     guid: 32b5a4fb40499db42b87ad45aea91971

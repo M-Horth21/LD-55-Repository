@@ -1,37 +1,68 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using System;
+using TMPro;
+using UnityEngine.UI;
 
-public class PentagramBehavior : MonoBehaviour
+public partial class PentagramBehavior : MonoBehaviour
 {
     [Scene]
     [SerializeField] string sceneName;
 
     [SerializeField]
-    InputActionReference _clickAction;
+    TextMeshProUGUI _tipText;
 
-    [SerializeField] GameObject glow;
+    [SerializeField]
+    GameObject _tipCanvas;
 
-    private bool clicked = false;
-    private void OnTriggerEnter(Collider other)
+    [SerializeField]
+    DifficultySetting _difficulty = DifficultySetting.Easy;
+
+    [SerializeField]
+    float _captureTime = 3;
+
+    [SerializeField]
+    Slider _progressSlider;
+
+    [SerializeField]
+    int _portalId = 0;
+
+    [SerializeField]
+    GameState _gameState;
+
+    float _captureProgress = 0;
+    bool _capturing = false;
+
+    private void Awake()
     {
-        glow.SetActive(true);
+        _tipText.text = $"Entering {_difficulty} level";
+        _tipCanvas.SetActive(false);
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!clicked && _clickAction.action.ReadValue<float>() > 0)
+        _captureProgress = 0;
+        _capturing = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        _capturing = false;
+        _captureProgress = 0;
+    }
+
+    private void Update()
+    {
+        if (!_capturing) return;
+
+        _captureProgress += Time.deltaTime;
+        _progressSlider.value = _captureProgress / _captureTime;
+
+        if (_captureProgress >= _captureTime)
         {
-            clicked = true;
-            Debug.Log("test");
+            _gameState.BeginPortal(PortalId, _difficulty);
             SceneManager.LoadScene(sceneName);
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        glow.SetActive(false);
-    }
+
+    public int PortalId => _portalId;
 }
