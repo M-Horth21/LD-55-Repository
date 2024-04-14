@@ -20,6 +20,8 @@ public class GameCompletionController : MonoBehaviour
         _runTimeDisplay.text = TimeFormatter.GetTimeString(_gameState.RunTime);
         _portalsCompletedDisplay.text = $"{_gameState.NumberOfCompletedPortals:N0}/11";
 
-        LeaderboardWebRequests.Instance.GetAllRecords();
+        GetLeaderboardRecords();
     }
+
+    public void GetLeaderboardRecords() => LeaderboardWebRequests.Instance.GetAllRecords();
 }
