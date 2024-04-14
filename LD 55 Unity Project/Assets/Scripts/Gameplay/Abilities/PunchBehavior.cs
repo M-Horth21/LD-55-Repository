@@ -7,6 +7,7 @@ public class PunchBehavior : MonoBehaviour
     LayerMask affectedObjects;
 
     private float punchStrength = 0f;
+    private string punchHit;
     private void OnEnable()
     {
 
@@ -21,12 +22,14 @@ public class PunchBehavior : MonoBehaviour
         if ((affectedObjects & (1 << other.gameObject.layer)) != 0)
         {
             other.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * punchStrength, ForceMode.Impulse);
+            AudioManager.instance.PlaySound(punchHit);
         }
     }
 
 
     public void SetSettings(PunchSettings settings)
     {
+        punchHit = settings.punchHit; ;
         punchStrength = settings.punchStrength;
         affectedObjects = settings.affectedLayers;
     }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   affectedLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   stunStrength: 0.697
   rechargeTime: 6
   abilityTime: 5

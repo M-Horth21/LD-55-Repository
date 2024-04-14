@@ -42,6 +42,8 @@ public class PunchAbility : IAbility
     {
         if (active) return;
 
+        AudioManager.instance.PlaySound(settings.punchWhif);
+
         currRecharge = abilityTime;
 
         currPunch = GameObject.Instantiate(punchPrefab);

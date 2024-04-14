@@ -19,3 +19,5 @@ MonoBehaviour:
   rechargeTime: 1
   abilityTime: 0.2
   punchPrefab: {fileID: 6835695426502109037, guid: 36b4ef0d0fab734439989156adef8cb4, type: 3}
+  punchWhif: PunchWhiff
+  punchHit: PunchHit
