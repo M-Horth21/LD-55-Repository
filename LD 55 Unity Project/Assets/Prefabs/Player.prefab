@@ -15,9 +15,7 @@ GameObject:
   - component: {fileID: 4572098367227373429}
   - component: {fileID: 6176254754301440466}
   - component: {fileID: 8501514420723278615}
-  - component: {fileID: 8824187548067482543}
   - component: {fileID: 2862971188835947547}
-  - component: {fileID: 5884692078630511572}
   - component: {fileID: 7068051712986448038}
   m_Layer: 7
   m_Name: Player
@@ -176,72 +174,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &8824187548067482543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928300622407421153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e40bac660f5ec0e408afad95dd81ddc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnMouseControl:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2862971188835947547}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5884692078630511572}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnGamepadControl:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2862971188835947547}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5884692078630511572}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &2862971188835947547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,20 +192,6 @@ MonoBehaviour:
     m_Bits: 64
   _aimAction: {fileID: -3058013490504393107, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
   _crosshair: {fileID: 9150365902025186133}
---- !u!114 &5884692078630511572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928300622407421153}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a4df93e726216468fa682b2c28f3d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _aimAction: {fileID: -3058013490504393107, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
-  _agentMotion: {fileID: 4572098367227373429}
 --- !u!114 &7068051712986448038
 MonoBehaviour:
   m_ObjectHideFlags: 0
