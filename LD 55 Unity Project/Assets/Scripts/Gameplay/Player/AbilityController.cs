@@ -115,8 +115,8 @@ public class AbilityController : MonoBehaviour
 
         if (scroll < 0)
         {
-            var nextAbility = (abilityIndex % numAbilities) - 1;
-            if (nextAbility < 0) nextAbility += numAbilities + 1;
+            var nextAbility = abilityIndex - 1;
+            if (nextAbility == 0) nextAbility += numAbilities;
             SetCurrAbility(nextAbility);
         }
         else if (scroll > 0)
