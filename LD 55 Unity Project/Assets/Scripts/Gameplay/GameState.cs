@@ -10,6 +10,7 @@ public class GameState : ScriptableObject
     public List<int> CompletedPortals => _completedPortals;
     public int NumberOfCompletedPortals => CompletedPortals.Count;
     public TimeSpan RunTime => _runEndTime - _runStartTime;
+    public int CurrentPortal => _currentPortal;
 
     [Scene]
     [SerializeField]
@@ -51,7 +52,6 @@ public class GameState : ScriptableObject
     public void EndActivePortal(bool successful)
     {
         if (successful) _completedPortals.Add(_currentPortal);
-        _currentPortal = -1;
     }
 
     public int GetRankOfAbility(AbilityType ability) => _abilityRanks[ability];
