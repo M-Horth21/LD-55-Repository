@@ -12,9 +12,19 @@ public class EndLevelTester : MonoBehaviour
     [SerializeField]
     string _lobbyScene;
 
+    [Scene]
+    [SerializeField]
+    string _winScene;
+
     private void OnGUI()
     {
         GUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("Final Win"))
+        {
+            _gameState.EndActivePortal(true);
+            SceneManager.LoadScene(_winScene);
+        }
 
         if (GUILayout.Button("Win"))
         {
