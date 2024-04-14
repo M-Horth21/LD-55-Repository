@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8204471323826040046}
   - component: {fileID: 5997637147323633074}
+  - component: {fileID: 1617043186226985074}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -47,13 +48,25 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3613567641014311022, guid: 9b75c6d4121d32b4fa029d152f41ecca, type: 3}
+--- !u!114 &1617043186226985074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494543084775271532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1c89349a217ea4b9a6e0446d08405a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2897195081242937283
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,7 +94,7 @@ Transform:
   m_GameObject: {fileID: 2897195081242937283}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.28, z: 0}
+  m_LocalPosition: {x: 0, y: 1.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -160,7 +173,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0

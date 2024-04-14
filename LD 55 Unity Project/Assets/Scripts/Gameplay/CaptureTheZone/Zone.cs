@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Zone : MonoBehaviour
 {
+    [SerializeField] LayerMask playerLayer;
 
     [SerializeField] CaptureTheZoneManager captureTheZoneManager;
     private void OnTriggerEnter(Collider other)
     {
-        captureTheZoneManager.SetInZone(true);
+        if ((playerLayer & (1 << other.gameObject.layer)) != 0)
+        {
+            captureTheZoneManager.SetInZone(true);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        captureTheZoneManager.SetInZone(false);
+        if ((playerLayer & (1 << other.gameObject.layer)) != 0)
+        {
+            captureTheZoneManager.SetInZone(false);
+        }
     }
 }

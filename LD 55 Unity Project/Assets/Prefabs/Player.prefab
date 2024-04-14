@@ -18,7 +18,8 @@ GameObject:
   - component: {fileID: 8824187548067482543}
   - component: {fileID: 2862971188835947547}
   - component: {fileID: 5884692078630511572}
-  m_Layer: 0
+  - component: {fileID: 7068051712986448038}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,6 +42,7 @@ Transform:
   - {fileID: 7953542852584334990}
   - {fileID: 264475899461450958}
   - {fileID: 4538917173984270379}
+  - {fileID: 9150365902025186133}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2682911746210653958
@@ -257,7 +259,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _aimAction: {fileID: -3058013490504393107, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
-  _crosshair: {fileID: 0}
+  _crosshair: {fileID: 9150365902025186133}
 --- !u!114 &5884692078630511572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +274,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aimAction: {fileID: -3058013490504393107, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
   _agentMotion: {fileID: 4572098367227373429}
+--- !u!114 &7068051712986448038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928300622407421153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b58150c9e1966d40819a173fc5b00c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4182047821838654676
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,8 +297,7 @@ GameObject:
   - component: {fileID: 264475899461450958}
   - component: {fileID: 1225248853389692575}
   - component: {fileID: 8363404919213224310}
-  - component: {fileID: 7838965000907778450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,27 +371,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7838965000907778450
-BoxCollider:
+--- !u!1 &4323368090376499279
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4182047821838654676}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9150365902025186133}
+  m_Layer: 7
+  m_Name: Player Crosshair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9150365902025186133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4323368090376499279}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.3527, y: 2.974443, z: 0.9210968}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1562019349961280680}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5760901233063621487
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4538917173984270379}
   - component: {fileID: 4990592434363031596}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +507,11 @@ GameObject:
   - component: {fileID: 4655983790045222740}
   - component: {fileID: 5070045975757710112}
   - component: {fileID: 5250552968195829155}
-  m_Layer: 0
+  - component: {fileID: 142252538768547262}
+  - component: {fileID: 9037661733263095117}
+  - component: {fileID: 3563857875490159078}
+  - component: {fileID: 1633283066434664974}
+  m_Layer: 7
   m_Name: Ability Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,6 +545,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea10041b4afaef4aa7e06a86027d478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseHold: {fileID: 8589221937481295238, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
+  playerCursor: {fileID: 9150365902025186133}
+  playerTransform: {fileID: 1562019349961280680}
+  punchIndicator: {fileID: 0}
+  windIndicator: {fileID: 0}
+  wallIndicator: {fileID: 0}
+  dashIndicator: {fileID: 0}
+  abilityPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  selectionHover: {fileID: 0}
+  punchSettings: {fileID: 11400000, guid: cd65d768783078c479faf48b2367d489, type: 2}
+  windSettings: {fileID: 11400000, guid: 3f9c2cc7744e82b478ed9eae42317f31, type: 2}
+  wallSettings: {fileID: 11400000, guid: 8821d7656b86e4a458781190d6934c46, type: 2}
+  dashSettings: {fileID: 11400000, guid: d94f1e80d16e83345b150f3609d4130c, type: 2}
 --- !u!114 &5070045975757710112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,7 +581,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4655983790045222740}
         m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
-        m_MethodName: CastAbility
+        m_MethodName: SetCurrAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -573,7 +619,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4655983790045222740}
         m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
-        m_MethodName: CastAbility
+        m_MethodName: SetCurrAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -584,6 +630,158 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _actionReference: {fileID: -7059074147966365749, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
+  _newAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b7188036-c3ee-49ca-a7b1-7358c9a33bbb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _createNewAction: 0
+--- !u!114 &142252538768547262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8998708282959845377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96719bab357c3384baa66abc8bebb442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onActionPerformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4655983790045222740}
+        m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
+        m_MethodName: SetCurrAbility
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionReference: {fileID: 2918566400553521831, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
+  _newAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b7188036-c3ee-49ca-a7b1-7358c9a33bbb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _createNewAction: 0
+--- !u!114 &9037661733263095117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8998708282959845377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96719bab357c3384baa66abc8bebb442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onActionPerformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4655983790045222740}
+        m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
+        m_MethodName: SetCurrAbility
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionReference: {fileID: 3918756922081690161, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
+  _newAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b7188036-c3ee-49ca-a7b1-7358c9a33bbb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _createNewAction: 0
+--- !u!114 &3563857875490159078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8998708282959845377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96719bab357c3384baa66abc8bebb442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onActionPerformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4655983790045222740}
+        m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
+        m_MethodName: SetCurrAbility
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionReference: {fileID: 8856287916604085716, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
+  _newAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b7188036-c3ee-49ca-a7b1-7358c9a33bbb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _createNewAction: 0
+--- !u!114 &1633283066434664974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8998708282959845377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96719bab357c3384baa66abc8bebb442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onActionPerformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4655983790045222740}
+        m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
+        m_MethodName: SetCurrAbility
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionReference: {fileID: -4244639387593795333, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
   _newAction:
     m_Name: 
     m_Type: 0
