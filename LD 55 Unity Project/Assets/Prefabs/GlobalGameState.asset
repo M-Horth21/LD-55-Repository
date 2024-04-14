@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5779d58131b9e4699516efe7d17d94, type: 3}
   m_Name: GlobalGameState
   m_EditorClassIdentifier: 
+  _sceneOrder:
+  - CaptureTheZone
+  - Fortnite
+  - SheepQuest
+  _finalScene: CaptureTheZone
