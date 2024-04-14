@@ -3189,6 +3189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigWall
       objectReference: {fileID: 0}
+    - target: {fileID: 6429942873415182591, guid: eebdf6a358ecc7a43bbf24d6365fc35f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3939fc9a888b7564d979e5fd2ef7dfb8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

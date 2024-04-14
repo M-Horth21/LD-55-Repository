@@ -18,6 +18,8 @@ public class AbilityController : MonoBehaviour
     [SerializeField] RectTransform windIndicator;
     [SerializeField] RectTransform wallIndicator;
     [SerializeField] RectTransform dashIndicator;
+    [SerializeField] RectTransform stunIndicator;
+
 
     [Header("")]
     [Header("UI Selected Indicator")]
@@ -33,11 +35,15 @@ public class AbilityController : MonoBehaviour
     [SerializeField] WindSettings windSettings;
     [SerializeField] WallSettings wallSettings;
     [SerializeField] DashSettings dashSettings;
+    [SerializeField] StunSettings stunSettings;
+
 
     PunchAbility punchAbility;
     WindAbility windAbility;
     WallAbility wallAbility;
     DashAbility dashAbility;
+    StunAbility stunAbility;
+
 
 
     List<IAbility> abilities = new List<IAbility>();
@@ -52,12 +58,15 @@ public class AbilityController : MonoBehaviour
         windAbility = new WindAbility(windSettings);
         wallAbility = new WallAbility(wallSettings);
         dashAbility = new DashAbility(dashSettings, playerTransform);
+        stunAbility = new StunAbility(stunSettings);
 
 
         abilities.Add(punchAbility);
         abilities.Add(windAbility);
         abilities.Add(wallAbility);
         abilities.Add(dashAbility);
+        abilities.Add(stunAbility);
+
     }
 
     // Null ability exists so I don't have to do a null check when deactivating.
@@ -100,6 +109,13 @@ public class AbilityController : MonoBehaviour
                 currAbility = wallAbility;
                 currAbility.Activate();
                 break;
+            case 4:
+                if (stunAbility.recharge < .99f) break;
+                Debug.Log($"Casting ability {abilityNumber}!");
+                currAbility.Deactivate();
+                currAbility = stunAbility;
+                currAbility.Activate();
+                break;
 
             default:
                 Debug.LogWarning($"Improper Ability Number: {abilityNumber}");
@@ -136,6 +152,7 @@ public class AbilityController : MonoBehaviour
         wallIndicator.localScale = new Vector3(windIndicator.localScale.x, wallAbility.recharge, windIndicator.localScale.z);
         punchIndicator.localScale = new Vector3(punchIndicator.localScale.x, punchAbility.recharge, punchIndicator.localScale.z);
         dashIndicator.localScale = new Vector3(dashIndicator.localScale.x, dashAbility.recharge, dashIndicator.localScale.z);
+        stunIndicator.localScale = new Vector3(stunIndicator.localScale.x, stunAbility.recharge, stunIndicator.localScale.z);
 
 
         currAbility.Logic(playerTransform.position, playerCursor.position);
