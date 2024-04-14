@@ -16,6 +16,7 @@ public class LeaderboardRecord
     public string playerName;
     public ulong runTime;
     public string badge;
+    public int portalsCompleted;
 
     public string Stringify()
     {

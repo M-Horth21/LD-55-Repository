@@ -7,6 +7,9 @@ using UnityEngine.Networking;
 
 public class LeaderboardWebRequests : Singleton<LeaderboardWebRequests>
 {
+    [SerializeField]
+    GameState _gameState;
+
     public static List<LeaderboardRecord> AllEntries;
     public static List<LeaderboardRecord> EntriesToShow;
     public static ulong QuickestTime;
@@ -173,13 +176,13 @@ public class LeaderboardWebRequests : Singleton<LeaderboardWebRequests>
         //OnNewIDGenerated.Invoke(webRequest.downloadHandler.text);
     }
 
-    public void SubmitScore(ulong runTime, string playerName = "unnamed")
+    public void SubmitScore(string playerName = "unnamed")
     {
         string endPoint = $"{RootApiUrl}/scores/submit";
-        StartCoroutine(SubmitScoreCoroutine(endPoint, runTime, playerName));
+        StartCoroutine(SubmitScoreCoroutine(endPoint, playerName));
     }
 
-    IEnumerator SubmitScoreCoroutine(string uri, ulong runTime, string playerName)
+    IEnumerator SubmitScoreCoroutine(string uri, string playerName)
     {
         var webRequest = new UnityWebRequest(uri, "POST");
 
@@ -188,8 +191,9 @@ public class LeaderboardWebRequests : Singleton<LeaderboardWebRequests>
         {
             id = SystemInfo.deviceUniqueIdentifier,
             playerName = playerName,
-            runTime = runTime,
+            runTime = _gameState.RunTime,
             badge = "",
+            portalsCompleted = _gameState.NumberOfCompletedPortals
         };
 
         Debug.Log($"Submitting score record:\n{submission.Stringify()}");

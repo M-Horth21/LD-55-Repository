@@ -10,9 +10,15 @@ public class GameState : ScriptableObject
     public List<int> CompletedPortals => _completedPortals;
     public int NumberOfCompletedPortals => CompletedPortals.Count;
 
+    public ulong RunTime =>
+        (ulong)(_runEndTime - _runStartTime).TotalMilliseconds;
+
     int _currentPortal = -1;
     List<int> _completedPortals = new();
     Dictionary<AbilityType, int> _abilityRanks = new();
+
+    DateTime _runStartTime;
+    DateTime _runEndTime;
 
     public void Initialize()
     {
@@ -23,6 +29,8 @@ public class GameState : ScriptableObject
         {
             _abilityRanks.Add(type, 0);
         }
+
+        _runStartTime = DateTime.Now;
     }
 
     public void BeginPortal(int portalId, DifficultySetting portalDifficulty)
@@ -40,4 +48,6 @@ public class GameState : ScriptableObject
     public int GetRankOfAbility(AbilityType ability) => _abilityRanks[ability];
 
     public void LevelUpAbility(AbilityType ability) => _abilityRanks[ability]++;
+
+    public void CompleteRun() => _runEndTime = DateTime.Now;
 }
