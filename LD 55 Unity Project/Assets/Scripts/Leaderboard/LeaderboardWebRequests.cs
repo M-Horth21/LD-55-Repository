@@ -101,7 +101,6 @@ public class LeaderboardWebRequests : Singleton<LeaderboardWebRequests>
 
             var recordsList = LeaderboardRecordList.Parse(webRequest.downloadHandler.text);
             AllEntries = recordsList.leaderboardRecords;
-            QuickestTime = recordsList.leaderboardRecords[0].runTime;
             OnLeaderboardRecordsFetched.Invoke(recordsList);
         }
 
