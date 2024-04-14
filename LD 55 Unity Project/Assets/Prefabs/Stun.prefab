@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 8122082916746975863}
   - component: {fileID: 745965949278253373}
   - component: {fileID: 2794329308003077155}
+  - component: {fileID: 6801941043603469119}
   m_Layer: 0
   m_Name: Stun
   m_TagString: Untagged
@@ -5109,3 +5110,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6801941043603469119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215323829358386441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801705075547446459119a8833557961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playOnEnable: 1
+  _minPitch: 0.9
+  _maxPitch: 1.1

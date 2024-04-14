@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -45,6 +46,7 @@ public class AbilityController : MonoBehaviour
     StunAbility stunAbility;
 
 
+    bool IsMouseOverUI() => EventSystem.current.IsPointerOverGameObject();
 
     List<IAbility> abilities = new List<IAbility>();
 
@@ -167,6 +169,11 @@ public class AbilityController : MonoBehaviour
             return;
         }
 
+        if(ability > numAbilities)
+        {
+            return;
+        }
+
         abilityIndex = ability;
 
         selectionHover.transform.position = abilityPositions[ability - 1].position;
@@ -188,7 +195,7 @@ public class AbilityController : MonoBehaviour
 
     private void StartAbility(InputAction.CallbackContext obj)
     {
-        CastAbility(abilityIndex);
+        if ( !IsMouseOverUI()) CastAbility(abilityIndex);
     }
 
     private void CancelAbility(InputAction.CallbackContext obj)

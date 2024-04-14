@@ -17,5 +17,5 @@ MonoBehaviour:
     m_Bits: 128
   rechargeTime: 3
   abilityTime: 2
-  windStrength: 1.5
+  windStrength: 2
   windPrefab: {fileID: 6184427015966422511, guid: a5cc0c284ea24564b90f5e8f355deb05, type: 3}
