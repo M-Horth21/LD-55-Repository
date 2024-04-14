@@ -13,7 +13,6 @@ public interface IAbility
 
 public enum AbilityType
 {
-    Dash,
     Punch,
     Wind,
     Wall,
