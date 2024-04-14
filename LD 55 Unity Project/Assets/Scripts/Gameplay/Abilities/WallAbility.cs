@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class WallAbility : IAbility
 {
+    WallSettings settings;
+    LayerMask wallLayer;
     GameObject wallPrefab;
 
     private float _recharge;
@@ -25,6 +27,10 @@ public class WallAbility : IAbility
 
     public WallAbility(WallSettings wallSettings)
     {
+        this.settings = wallSettings;
+
+
+        this.wallLayer = wallSettings.wallLayer;
         this.wallPrefab = wallSettings.wallPrefab;
         this.rechargeTime = wallSettings.rechargeTime;
         this.abilityTime = wallSettings.abilityTime;
@@ -38,12 +44,26 @@ public class WallAbility : IAbility
 
         currRecharge = abilityTime;
 
+
         active = true;
         recharging = false;
     }
     public void Logic(Vector3 startPos, Vector3 targetPos)
     {
         if (!active) return;
+
+        RaycastHit hit;
+
+
+
+        if(Physics.SphereCast(new Vector3(targetPos.x, targetPos.y + 5, targetPos.z), .3f, Vector3.down, out hit, 5, wallLayer))
+        {
+        }
+        else
+        {
+            GameObject wall = GameObject.Instantiate(wallPrefab, targetPos, Quaternion.identity);
+            wall.GetComponent<WallBehavior>().SetSettings(settings);
+        }
 
         if (currRecharge < .01)
         {

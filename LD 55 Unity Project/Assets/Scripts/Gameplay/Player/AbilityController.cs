@@ -143,15 +143,13 @@ public class AbilityController : MonoBehaviour
 
         }
 
-        Debug.Log(abilityIndex);
-
         foreach (IAbility ability in abilities)
         {
             ability.Tick();
         }
 
         windIndicator.localScale = new Vector3(windIndicator.localScale.x, windAbility.recharge, windIndicator.localScale.z);
-        wallIndicator.localScale = new Vector3(windIndicator.localScale.x, wallAbility.recharge, windIndicator.localScale.z);
+        wallIndicator.localScale = new Vector3(wallIndicator.localScale.x, wallAbility.recharge, wallIndicator.localScale.z);
         punchIndicator.localScale = new Vector3(punchIndicator.localScale.x, punchAbility.recharge, punchIndicator.localScale.z);
         dashIndicator.localScale = new Vector3(dashIndicator.localScale.x, dashAbility.recharge, dashIndicator.localScale.z);
         stunIndicator.localScale = new Vector3(stunIndicator.localScale.x, stunAbility.recharge, stunIndicator.localScale.z);
@@ -159,6 +157,11 @@ public class AbilityController : MonoBehaviour
 
         currAbility.Logic(playerTransform.position, playerCursor.position);
     }
+
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.DrawSphere(playerCursor.position, .5f);
+    //}
 
     public void SetCurrAbility(int ability)
     {

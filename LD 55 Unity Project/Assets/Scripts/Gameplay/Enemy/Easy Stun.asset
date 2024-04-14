@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5025bd2caeacb9349ad87e182660383e, type: 3}
-  m_Name: New Wall Settings
+  m_Script: {fileID: 11500000, guid: c53f4911e9fff1d49822f3db1b5b9d11, type: 3}
+  m_Name: Easy Stun
   m_EditorClassIdentifier: 
-  rechargeTime: 4
-  abilityTime: 1
-  wallDuration: 4
-  wallPrefab: {fileID: 4994144191811919893, guid: 7df8402b16db05d438e88ce2c66ce65c, type: 3}
-  wallLayer:
+  affectedLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 128
+  stunStrength: 0.697
+  rechargeTime: 6
+  abilityTime: 5
+  stunPrefab: {fileID: 9215323829358386441, guid: e0fa8a897c959ad4b82e1778b89136fb, type: 3}
