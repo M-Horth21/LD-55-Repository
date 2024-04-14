@@ -65,7 +65,7 @@ public class AbilityController : MonoBehaviour
 
     private void CastAbility(int abilityNumber)
     {
-        if(abilityNumber == 6)
+        if (abilityNumber == 6)
         {
             if (dashAbility.recharge < .99f) return;
 
@@ -113,19 +113,13 @@ public class AbilityController : MonoBehaviour
         Vector2 scrollVec = Mouse.current.scroll.ReadValue();
         float scroll = scrollVec.y;
 
-        if(scroll < 0)
+        if (scroll < 0)
         {
-            if(abilityIndex == 1)
-            {
-                SetCurrAbility(numAbilities);
-            }
-            else
-            {
-                SetCurrAbility(((abilityIndex) % numAbilities) - 1);
-
-            }
+            var nextAbility = (abilityIndex % numAbilities) - 1;
+            if (nextAbility < 0) nextAbility += numAbilities + 1;
+            SetCurrAbility(nextAbility);
         }
-        else if(scroll > 0)
+        else if (scroll > 0)
         {
             SetCurrAbility(((abilityIndex) % numAbilities) + 1);
 
@@ -133,7 +127,7 @@ public class AbilityController : MonoBehaviour
 
         Debug.Log(abilityIndex);
 
-        foreach(IAbility ability in abilities)
+        foreach (IAbility ability in abilities)
         {
             ability.Tick();
         }
@@ -150,7 +144,7 @@ public class AbilityController : MonoBehaviour
     public void SetCurrAbility(int ability)
     {
         // dash ability. Do this one immediately and don't cancel other abilities.
-        if(ability == 6)
+        if (ability == 6)
         {
             CastAbility(ability);
             return;
