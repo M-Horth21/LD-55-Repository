@@ -191,7 +191,7 @@ public class LeaderboardWebRequests : Singleton<LeaderboardWebRequests>
         {
             id = SystemInfo.deviceUniqueIdentifier,
             playerName = playerName,
-            runTime = _gameState.RunTime,
+            runTime = (ulong)_gameState.RunTime.TotalMilliseconds,
             badge = "",
             portalsCompleted = _gameState.NumberOfCompletedPortals
         };
