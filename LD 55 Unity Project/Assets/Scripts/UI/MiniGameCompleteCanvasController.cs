@@ -1,6 +1,4 @@
-using NUnit.Framework;
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MiniGameCompleteCanvasController : MonoBehaviour
@@ -9,10 +7,7 @@ public class MiniGameCompleteCanvasController : MonoBehaviour
     GameObject _panel;
 
     [SerializeField]
-    GameObject _winText;
-
-    [SerializeField]
-    GameObject _loseText;
+    TextMeshProUGUI _resultText;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +18,6 @@ public class MiniGameCompleteCanvasController : MonoBehaviour
     public void ShowPanel(bool success)
     {
         _panel.SetActive(true);
-        _winText.SetActive(success);
-        _loseText.SetActive(!success);
+        _resultText.text = success ? "You've completed this portal" : "You lost... try again";
     }
 }
