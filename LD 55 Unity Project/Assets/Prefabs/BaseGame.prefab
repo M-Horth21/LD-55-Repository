@@ -2973,13 +2973,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1793738016360068117, guid: bb3c2598d28ff324db1e0ea749e47e7a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7533169606942694314, guid: bb3c2598d28ff324db1e0ea749e47e7a, type: 3}
       propertyPath: m_Name
-      value: Win_Lose Canvas
+      value: Prompt Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
