@@ -45,6 +45,7 @@ public class DashAbility : IAbility
     {
         if (active) return;
 
+        AudioManager.instance.PlaySound("Dash");
         currRecharge = abilityTime;
 
         active = true;

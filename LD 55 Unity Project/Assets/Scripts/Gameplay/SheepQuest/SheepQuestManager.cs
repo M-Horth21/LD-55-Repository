@@ -127,6 +127,7 @@ public class SheepQuestManager : MonoBehaviour
     {
         _gameEnded = true;
         _gameState.EndActivePortal(false);
+        AudioManager.instance.PlaySound("LevelLose");
         OnGameLose.Invoke();
         StartCoroutine(DelayedSceneChange());
     }
@@ -135,6 +136,7 @@ public class SheepQuestManager : MonoBehaviour
     {
         _gameEnded = true;
         _gameState.EndActivePortal(true);
+        AudioManager.instance.PlaySound("LevelWin");
         OnGameWin.Invoke();
         StartCoroutine(DelayedSceneChange());
     }

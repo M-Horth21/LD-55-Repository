@@ -17,6 +17,7 @@ public class GoToSceneAction : ScriptableObject
   public void GoToScene()
   {
     LoadSceneMode mode = _additiveScene ? LoadSceneMode.Additive : LoadSceneMode.Single;
-    SceneManager.LoadScene(_targetScene, mode);
+        SceneTransition.instance.TransitionToScene(_targetScene);
+    //SceneManager.LoadScene(_targetScene, mode);
   }
 }

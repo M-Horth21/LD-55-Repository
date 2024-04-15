@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Orb : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        AudioManager.instance.PlaySound("OrbCollect");
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        AudioManager.instance.StopSound("OrbCollect");
     }
 }

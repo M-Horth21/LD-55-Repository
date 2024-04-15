@@ -39,6 +39,7 @@ public class FortniteManager : MonoBehaviour
     public void Lose()
     {
         _gameState.EndActivePortal(false);
+        AudioManager.instance.PlaySound("LevelLose");
         OnGameLose.Invoke();
         StartCoroutine(DelayedSceneChange());
     }
@@ -46,6 +47,7 @@ public class FortniteManager : MonoBehaviour
     public void Win()
     {
         _gameState.EndActivePortal(true);
+        AudioManager.instance.PlaySound("LevelWin");
         OnGameWin.Invoke();
         StartCoroutine(DelayedSceneChange());
     }

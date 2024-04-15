@@ -38,12 +38,15 @@ public partial class PentagramBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        AudioManager.instance.PlaySound("Teleport");
         _captureProgress = 0;
         _capturing = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
+        AudioManager.instance.StopSound("Teleport");
+
         _capturing = false;
         _captureProgress = 0;
     }

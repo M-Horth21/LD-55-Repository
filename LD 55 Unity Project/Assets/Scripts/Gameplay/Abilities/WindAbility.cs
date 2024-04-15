@@ -47,6 +47,8 @@ public class WindAbility : IAbility
             return;
         }
 
+        AudioManager.instance.PlaySound("Wind");
+
         currWind = GameObject.Instantiate(windPrefab);
 
         currWind.GetComponentInChildren<WindBehavior>().SetSettings(settings);
@@ -73,6 +75,8 @@ public class WindAbility : IAbility
     }
     public void Deactivate()
     {
+        AudioManager.instance.StopSound("Wind");
+
         GameObject.Destroy(currWind);
         currRecharge = (_recharge * rechargeTime);
         recharging = true;

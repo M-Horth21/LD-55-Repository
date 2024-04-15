@@ -55,7 +55,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - soundName: PunchHit
     soundClip: {fileID: 8300000, guid: ff7811b489dcebd49958d9fe4b23b674, type: 3}
-    soundVolume: 1
+    soundVolume: 0.556
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
@@ -65,4 +65,70 @@ MonoBehaviour:
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
-  songs: []
+  - soundName: Dash
+    soundClip: {fileID: 8300000, guid: 24ce45720b26e4549bdc95534931b5ae, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: LevelWin
+    soundClip: {fileID: 8300000, guid: ff761719dcbe48a4aaa02913b152c115, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: LevelLose
+    soundClip: {fileID: 8300000, guid: a1f756d21ece63d4ea77c642dd64d36b, type: 3}
+    soundVolume: 0.603
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: Teleport
+    soundClip: {fileID: 8300000, guid: a05dd6dc3cfd0b74694a981c2dc16334, type: 3}
+    soundVolume: 0.736
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: Stun
+    soundClip: {fileID: 8300000, guid: 3c90a544e31c1844d92c0eae2828580c, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: EnemyStun
+    soundClip: {fileID: 8300000, guid: ae40283a272bc4e4193718b3a06e891e, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: Wind
+    soundClip: {fileID: 8300000, guid: fd95d863537d7ea428232df51f33ce62, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: OrbCollect
+    soundClip: {fileID: 8300000, guid: 165cc102fa454ef489908ba770c7948f, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  songs:
+  - songName: MenuTheme
+    songClip: {fileID: 8300000, guid: afe59e947b1775045ac6700919a939be, type: 3}
+    songVolume: 0.289
+    songPitch: 1
+    isLooping: 1
+    source: {fileID: 0}
+  - songName: BattleTheme
+    songClip: {fileID: 8300000, guid: 9014c0640d5290b44b6139cf4db31533, type: 3}
+    songVolume: 0.273
+    songPitch: 1
+    isLooping: 1
+    source: {fileID: 0}
+  - songName: VictoryTheme
+    songClip: {fileID: 8300000, guid: c370372cf66875e45ad86ec5e690d542, type: 3}
+    songVolume: 0.273
+    songPitch: 1
+    isLooping: 1
+    source: {fileID: 0}
