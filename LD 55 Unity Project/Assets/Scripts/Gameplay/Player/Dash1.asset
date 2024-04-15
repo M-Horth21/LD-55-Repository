@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3602c47287d46a4d9ec6fcfb014e403, type: 3}
-  m_Name: New Dash Settings
+  m_Name: Dash1
   m_EditorClassIdentifier: 
   rechargeTime: 3
   abilityTime: 0.05

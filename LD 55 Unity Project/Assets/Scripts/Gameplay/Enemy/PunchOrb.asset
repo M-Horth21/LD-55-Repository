@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ee7ee9d0d0bf4048975365b42c6a04f, type: 3}
-  m_Name: EasyPunch
+  m_Name: PunchOrb
   m_EditorClassIdentifier: 
   affectedLayers:
     serializedVersion: 2
     m_Bits: 640
-  punchStrength: 60.1
+  punchStrength: 50.5
   rechargeTime: 1
   abilityTime: 0.2
   punchPrefab: {fileID: 6835695426502109037, guid: 36b4ef0d0fab734439989156adef8cb4, type: 3}

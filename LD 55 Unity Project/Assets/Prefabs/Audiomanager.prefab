@@ -113,6 +113,18 @@ MonoBehaviour:
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
+  - soundName: EnemyPunchHit
+    soundClip: {fileID: 8300000, guid: 045c7dc399624234a941ae3a20d5601c, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: EnemyWhiff
+    soundClip: {fileID: 8300000, guid: f1d886b92cd4d2b44892a514cc9b6570, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
   songs:
   - songName: MenuTheme
     songClip: {fileID: 8300000, guid: afe59e947b1775045ac6700919a939be, type: 3}

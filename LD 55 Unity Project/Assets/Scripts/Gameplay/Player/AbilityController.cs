@@ -114,7 +114,6 @@ public class AbilityController : MonoBehaviour
         {
             if (dashAbility.recharge < .99f) return;
 
-            Debug.Log("Dashing");
             dashAbility.Activate();
 
             return;

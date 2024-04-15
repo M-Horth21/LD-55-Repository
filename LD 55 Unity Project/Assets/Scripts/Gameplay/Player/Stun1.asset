@@ -9,15 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ee7ee9d0d0bf4048975365b42c6a04f, type: 3}
-  m_Name: New Punch Settings
+  m_Script: {fileID: 11500000, guid: c53f4911e9fff1d49822f3db1b5b9d11, type: 3}
+  m_Name: Stun1
   m_EditorClassIdentifier: 
   affectedLayers:
     serializedVersion: 2
-    m_Bits: 768
-  punchStrength: 41.18
-  rechargeTime: 1
-  abilityTime: 0.2
-  punchPrefab: {fileID: 6835695426502109037, guid: cd9ffdd0f99efd841aaa80519160114d, type: 3}
-  punchWhif: PunchWhiff
-  punchHit: PunchHit
+    m_Bits: 256
+  stunStrength: 0
+  rechargeTime: 6
+  abilityTime: 4
+  stunPrefab: {fileID: 9215323829358386441, guid: 7fcce4bf9e73f7d479552d0e1a685f69, type: 3}

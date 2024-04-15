@@ -537,6 +537,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1509831644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &462980743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7401758156465687681, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+  m_PrefabInstance: {fileID: 1819705207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &566199745 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3964944523629543302, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
@@ -641,6 +646,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4177312822684521590, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: punchSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 19a16442131aa5240ad5fa62c2e44b31, type: 2}
+    - target: {fileID: 4177312822684521590, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1106095843}
@@ -654,7 +663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.96
+      value: 28.4
       objectReference: {fileID: 0}
     - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
       propertyPath: m_LocalPosition.y
@@ -662,7 +671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -23.49
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1482,7 +1491,7 @@ PrefabInstance:
       objectReference: {fileID: 1106095843}
     - target: {fileID: 6062181921075923258, guid: fe6c8a82091dd484c963ea57b640985e, type: 3}
       propertyPath: preference
-      value: 0.521
+      value: 0.378
       objectReference: {fileID: 0}
     - target: {fileID: 6920018164922819096, guid: fe6c8a82091dd484c963ea57b640985e, type: 3}
       propertyPath: m_Name
@@ -1742,11 +1751,14 @@ MonoBehaviour:
   enemyToTargetOrbMovement: {fileID: 2126082673}
   _mediumEnemies:
   - {fileID: 1424914693}
+  - {fileID: 462980743}
   _mediumOrbs:
   - {fileID: 1425060108}
   - {fileID: 1031265314}
   _hardEnemies:
   - {fileID: 645454316}
+  - {fileID: 1424914693}
+  - {fileID: 462980743}
   _hardOrbs:
   - {fileID: 751815427}
   - {fileID: 407126536}
@@ -1881,7 +1893,7 @@ PrefabInstance:
       objectReference: {fileID: 1106095843}
     - target: {fileID: 6062181921075923258, guid: 392b7b2fa5e2ba24ca46a6b2747d2b94, type: 3}
       propertyPath: preference
-      value: 0.382
+      value: 0.579
       objectReference: {fileID: 0}
     - target: {fileID: 6920018164922819096, guid: 392b7b2fa5e2ba24ca46a6b2747d2b94, type: 3}
       propertyPath: m_Name
@@ -1903,6 +1915,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcfc7a6eb1c07bd4ea0da4f39b5ae44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1819705207
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1093321072101687930, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: playerPos
+      value: 
+      objectReference: {fileID: 1106095843}
+    - target: {fileID: 1093321072101687930, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: preference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177312822684521590, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1106095843}
+    - target: {fileID: 7401758156465687681, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_Name
+      value: NormalPunch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401758156465687681, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -31.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760447060838404627, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
 --- !u!1001 &1847500256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2485,6 +2570,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[11].soundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 045c7dc399624234a941ae3a20d5601c, type: 3}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[11].soundName
+      value: EnemyPunchHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[12].soundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f1d886b92cd4d2b44892a514cc9b6570, type: 3}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[12].soundName
+      value: EnemyWhiff
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[11].soundPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[12].soundPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[11].soundVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[12].soundVolume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2612,5 +2733,6 @@ SceneRoots:
   - {fileID: 1438250570}
   - {fileID: 759746520749362875}
   - {fileID: 645454315}
+  - {fileID: 1819705207}
   - {fileID: 1424914691}
   - {fileID: 1713569548}

@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b830e45a1e9ba694c9134f7a15303cc6, type: 3}
-  m_Name: New Wind Settings
+  m_Script: {fileID: 11500000, guid: 5025bd2caeacb9349ad87e182660383e, type: 3}
+  m_Name: Wall1
   m_EditorClassIdentifier: 
-  affectedLayers:
+  rechargeTime: 4
+  abilityTime: 1
+  wallDuration: 4
+  wallPrefab: {fileID: 4994144191811919893, guid: 7df8402b16db05d438e88ce2c66ce65c, type: 3}
+  wallLayer:
     serializedVersion: 2
-    m_Bits: 768
-  rechargeTime: 3
-  abilityTime: 3
-  windStrength: 1
-  windPrefab: {fileID: 6184427015966422511, guid: a5cc0c284ea24564b90f5e8f355deb05, type: 3}
+    m_Bits: 1920

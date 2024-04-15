@@ -8,6 +8,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] Transform targetPos;
     [Range(0, 1), SerializeField] float preference = .5f;
 
+    private float _preference;
+
     [SerializeField] AgentMotion _agentMotion;
 
     Vector3 target; // it's a global variable so I can draw it in the gizmos.
@@ -26,13 +28,14 @@ public class EnemyMovement : MonoBehaviour
         // If no target position is given, just go straight for the player.
         if(targetPos == null)
         {
-            preference = 1;
+            _preference = 1;
             target = playerPos.position;
         }
         else
         {
+            _preference = preference;
             resultant = (playerPos.position - targetPos.position);
-            target = targetPos.position + (preference * resultant);
+            target = targetPos.position + (_preference * resultant);
         }
 
 
