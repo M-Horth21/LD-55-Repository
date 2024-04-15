@@ -132,3 +132,4 @@ MonoBehaviour:
     songPitch: 1
     isLooping: 1
     source: {fileID: 0}
+  _mixer: {fileID: 24300002, guid: 5590a236c77266b4fa75c3e788cd9e7d, type: 2}

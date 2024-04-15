@@ -25,8 +25,6 @@ public class VolumeSlider : MonoBehaviour
 
     void SliderChanged(float value)
     {
-        AudioManager.instance.SFXVolume(value);
-        AudioManager.instance.MusicVolume(value);
         _audioMixer.SetFloat("MasterVolume",
           AudioLevelFunctions.PercentToDecibels(value));
     }
