@@ -16,7 +16,7 @@ public class MiniGameHintDisplayer : MonoBehaviour
 
     IEnumerator HidePanelDelayed()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5f);
         _hintPanel.SetActive(false);
     }
 }

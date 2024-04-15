@@ -87,7 +87,7 @@ public class AbilityController : MonoBehaviour
 
         if(numAbilities > 0)
         {
-            abilityIndex = 1;
+            SetCurrAbility(1);
         }
 
         chargeIndicators.Add(punchIndicator);
