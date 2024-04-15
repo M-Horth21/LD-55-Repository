@@ -133,6 +133,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1611824540397979040, guid: 49a3056364089ad45866447d1776ab49, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611824540397979040, guid: 49a3056364089ad45866447d1776ab49, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -217,6 +221,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4609805032058064313, guid: 49a3056364089ad45866447d1776ab49, type: 3}
+      propertyPath: m_Value
+      value: 0.627
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609805032058064313, guid: 49a3056364089ad45866447d1776ab49, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -269,7 +277,15 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6861704403539596750, guid: 49a3056364089ad45866447d1776ab49, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861704403539596750, guid: 49a3056364089ad45866447d1776ab49, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861704403539596750, guid: 49a3056364089ad45866447d1776ab49, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8525712354277404200, guid: 49a3056364089ad45866447d1776ab49, type: 3}
