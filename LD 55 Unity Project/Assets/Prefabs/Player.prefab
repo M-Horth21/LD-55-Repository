@@ -157,7 +157,7 @@ Rigidbody:
   m_GameObject: {fileID: 928300622407421153}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -173,8 +173,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 116
-  m_CollisionDetection: 0
+  m_Constraints: 84
+  m_CollisionDetection: 2
 --- !u!114 &2862971188835947547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,7 +513,6 @@ GameObject:
   - component: {fileID: 5250552968195829155}
   - component: {fileID: 142252538768547262}
   - component: {fileID: 9037661733263095117}
-  - component: {fileID: 3563857875490159078}
   - component: {fileID: 1633283066434664974}
   m_Layer: 7
   m_Name: Ability Controller
@@ -552,6 +551,7 @@ MonoBehaviour:
   mouseHold: {fileID: 8589221937481295238, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
   playerCursor: {fileID: 9150365902025186133}
   playerTransform: {fileID: 1562019349961280680}
+  gameState: {fileID: 11400000, guid: 01f52473979437742a4a39ba9cf86070, type: 2}
   punchIndicator: {fileID: 0}
   windIndicator: {fileID: 0}
   wallIndicator: {fileID: 0}
@@ -569,7 +569,7 @@ MonoBehaviour:
   windSettings: {fileID: 11400000, guid: 3f9c2cc7744e82b478ed9eae42317f31, type: 2}
   wallSettings: {fileID: 11400000, guid: 8821d7656b86e4a458781190d6934c46, type: 2}
   dashSettings: {fileID: 11400000, guid: d94f1e80d16e83345b150f3609d4130c, type: 2}
-  stunSettings: {fileID: 0}
+  stunSettings: {fileID: 11400000, guid: aa474d09e92228843ba6271e2faa81f3, type: 2}
 --- !u!114 &5070045975757710112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,44 +712,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _actionReference: {fileID: 3918756922081690161, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
-  _newAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: b7188036-c3ee-49ca-a7b1-7358c9a33bbb
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  _createNewAction: 0
---- !u!114 &3563857875490159078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8998708282959845377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96719bab357c3384baa66abc8bebb442, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onActionPerformed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4655983790045222740}
-        m_TargetAssemblyTypeName: AbilityController, Assembly-CSharp
-        m_MethodName: SetCurrAbility
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _actionReference: {fileID: 8856287916604085716, guid: d385dc3d67ba6ec4683e2806ee501c51, type: 3}
   _newAction:
     m_Name: 
     m_Type: 0

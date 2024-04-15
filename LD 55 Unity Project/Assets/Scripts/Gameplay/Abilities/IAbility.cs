@@ -13,8 +13,8 @@ public interface IAbility
 
 public enum AbilityType
 {
-    Punch,
-    Wind,
-    Wall,
-    Stun
+    Punch = 1,
+    Wind = 2,
+    Wall = 3,
+    Stun = 4
 }

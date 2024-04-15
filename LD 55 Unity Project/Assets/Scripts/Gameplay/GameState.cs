@@ -67,6 +67,11 @@ public class GameState : ScriptableObject
         Debug.Log($"{abilityType} ability is rank {rank}");
         return rank;
     }
+    public int GetRankOfAbility(int abilityIndex)
+    {
+        AbilityType abilityType = (AbilityType)abilityIndex;
+        return GetRankOfAbility(abilityType);
+    }
 
     public void LevelUpAbility()
     {

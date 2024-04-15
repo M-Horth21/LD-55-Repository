@@ -66,15 +66,13 @@ public class SheepQuestManager : MonoBehaviour
             lr.enabled = false;
         }
 
+        orbsCaptured++;
+        progressBar.value = orbsCaptured / (float)origOrbCount;
+
         if(progressBar.value >= .98f)
         {
             Debug.Log("You Win!");
         }
-
-        orbsCaptured++;
-
-
-        progressBar.value = orbsCaptured / (float)origOrbCount;
     }
     IEnumerator UpdateEnemyTarget()
     {

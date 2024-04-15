@@ -12,6 +12,11 @@ public class AbilityController : MonoBehaviour
     [SerializeField] Transform playerCursor;
     [SerializeField] Transform playerTransform;
 
+
+    [Header("Game State")]
+    [SerializeField] GameState gameState;
+
+
     [Header("")]
 
     [Header("UI Charge Indicators")]
@@ -50,9 +55,10 @@ public class AbilityController : MonoBehaviour
 
     List<IAbility> abilities = new List<IAbility>();
 
-    private int numAbilities = 4;
+    private const int totalAbilities = 4;
+    private int numAbilities = 0;
 
-    private int abilityIndex = 1;
+    private int abilityIndex = 0;
 
     private void Awake()
     {
@@ -68,6 +74,19 @@ public class AbilityController : MonoBehaviour
         abilities.Add(wallAbility);
         abilities.Add(dashAbility);
         abilities.Add(stunAbility);
+
+        for(int i = 1; i <= totalAbilities; i++)
+        {
+            if(gameState.GetRankOfAbility(i) >= 1)
+            {
+                numAbilities++;
+            }
+        }
+
+        if(numAbilities > 0)
+        {
+            abilityIndex = 1;
+        }
 
     }
 
@@ -127,17 +146,7 @@ public class AbilityController : MonoBehaviour
         Vector2 scrollVec = Mouse.current.scroll.ReadValue();
         float scroll = scrollVec.y;
 
-        if (scroll > 0)
-        {
-            var nextAbility = abilityIndex - 1;
-            if (nextAbility == 0) nextAbility += numAbilities;
-            SetCurrAbility(nextAbility);
-        }
-        else if (scroll < 0)
-        {
-            SetCurrAbility(((abilityIndex) % numAbilities) + 1);
-
-        }
+        currAbility.Logic(playerTransform.position, playerCursor.position);
 
         foreach (IAbility ability in abilities)
         {
@@ -150,8 +159,24 @@ public class AbilityController : MonoBehaviour
         dashIndicator.localScale = new Vector3(dashIndicator.localScale.x, dashAbility.recharge, dashIndicator.localScale.z);
         stunIndicator.localScale = new Vector3(stunIndicator.localScale.x, stunAbility.recharge, stunIndicator.localScale.z);
 
+        if (abilityIndex != 0)
+        {
+        if (scroll > 0)
+        {
+            var nextAbility = abilityIndex - 1;
+            if (nextAbility == 0) nextAbility += numAbilities;
+            SetCurrAbility(nextAbility);
+        }
+        else if (scroll < 0)
+        {
+            SetCurrAbility(((abilityIndex) % numAbilities) + 1);
 
-        currAbility.Logic(playerTransform.position, playerCursor.position);
+        }
+        }
+
+
+
+
     }
 
     //private void OnDrawGizmos()
@@ -162,7 +187,7 @@ public class AbilityController : MonoBehaviour
     public void SetCurrAbility(int ability)
     {
         // dash ability. Do this one immediately and don't cancel other abilities.
-        if (ability == 6)
+        if (ability == 6) // 6 is dash
         {
             CastAbility(ability);
             return;
