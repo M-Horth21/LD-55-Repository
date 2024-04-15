@@ -42,6 +42,7 @@ public class FortniteManager : MonoBehaviour
         OnGameLose.Invoke();
         StartCoroutine(DelayedSceneChange());
     }
+
     public void Win()
     {
         _gameState.EndActivePortal(true);
