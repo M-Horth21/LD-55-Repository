@@ -14,6 +14,8 @@ public class QuitButton : MonoBehaviour
 
         if(SceneManager.GetActiveScene().name != "TitleScreen")
         {
+            AudioManager.instance.StopSong("BattleTheme");
+            AudioManager.instance.StopSong("VictoryTheme");
             SceneTransition.instance.TransitionToScene("TitleScreen");
             return;
         }
