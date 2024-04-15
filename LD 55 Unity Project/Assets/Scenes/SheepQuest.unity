@@ -653,21 +653,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2993293494813079388, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
-      propertyPath: m_text
-      value: Bring all orbs into the zone!
-      objectReference: {fileID: 0}
     - target: {fileID: 3207915175246973309, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
       propertyPath: m_Name
       value: BaseGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 3964944523629543302, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
-      propertyPath: m_Value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571312368288321004, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7571312368288321004, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1806,7 +1794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1509831644
 Transform:
   m_ObjectHideFlags: 0

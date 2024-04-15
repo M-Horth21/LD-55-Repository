@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player
+  m_Name: PunchEnemy
   m_Shader: {fileID: 4800000, guid: 8fa84e1c8f3a97b4bb416e8eb087630e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -44,11 +44,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0.5, y: 0}
     - _EmmisTex:
-        m_Texture: {fileID: 2800000, guid: be19200fbddec5b4da92dffda8fce24d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 34ae5fc91db1be7499aa9c467f5d4a46, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6b1399134bbe1b04295f35df3f849f8e, type: 3}
+        m_Texture: {fileID: 2800000, guid: b9d202e930fd1b047b6eb12ffc698582, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

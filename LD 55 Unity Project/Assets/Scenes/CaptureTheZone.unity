@@ -783,41 +783,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2993293494813079388, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
-      propertyPath: m_text
-      value: Stay in the zone to capture it!
-      objectReference: {fileID: 0}
     - target: {fileID: 3207915175246973309, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
       propertyPath: m_Name
       value: BaseGame
       objectReference: {fileID: 0}
     - target: {fileID: 7571312368288321004, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571312368288321004, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7669270169159393485, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
-      propertyPath: sounds.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7669270169159393485, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
-      propertyPath: sounds.Array.data[2].soundClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d471ac8d7c8671149812ce521f1a9a72, type: 3}
-    - target: {fileID: 7669270169159393485, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
-      propertyPath: sounds.Array.data[2].soundName
-      value: WallBuild
-      objectReference: {fileID: 0}
-    - target: {fileID: 7669270169159393485, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
-      propertyPath: sounds.Array.data[2].soundPitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7669270169159393485, guid: 3f8da052273ac5f42a1e4d589cefa4ef, type: 3}
-      propertyPath: sounds.Array.data[2].soundVolume
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -899,7 +871,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2074535688039075132, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

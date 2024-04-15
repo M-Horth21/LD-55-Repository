@@ -9,9 +9,12 @@ public class PunchEnemy : MonoBehaviour
 
     PunchAbility punchAbility;
 
+    Animator animator;
+
     private void Awake()
     {
-        punchAbility = new PunchAbility(punchSettings);
+        animator = GetComponentInChildren<Animator>();
+        punchAbility = new PunchAbility(punchSettings, animator);
     }
     private void Start()
     {

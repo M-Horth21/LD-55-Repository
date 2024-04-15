@@ -26,6 +26,8 @@ public class AbilityController : MonoBehaviour
     [SerializeField] RectTransform dashIndicator;
     [SerializeField] RectTransform stunIndicator;
 
+    List<RectTransform> chargeIndicators = new();
+    [SerializeField] GameObject indicatorCover;
 
     [Header("")]
     [Header("UI Selected Indicator")]
@@ -86,6 +88,19 @@ public class AbilityController : MonoBehaviour
         if(numAbilities > 0)
         {
             abilityIndex = 1;
+        }
+
+        chargeIndicators.Add(punchIndicator);
+        chargeIndicators.Add(windIndicator);
+        chargeIndicators.Add(wallIndicator);
+        chargeIndicators.Add(stunIndicator);
+
+        for(int i = numAbilities; i < totalAbilities; i++)
+        {
+            GameObject cover = Instantiate(indicatorCover, chargeIndicators[i].parent);
+            //cover.transform.localScale = Vector3.one;
+            
+            //chargeIndicators[i].GetComponent<RawImage>().color = Color.gray;
         }
 
     }
@@ -153,11 +168,11 @@ public class AbilityController : MonoBehaviour
             ability.Tick();
         }
 
-        windIndicator.localScale = new Vector3(windIndicator.localScale.x, windAbility.recharge, windIndicator.localScale.z);
-        wallIndicator.localScale = new Vector3(wallIndicator.localScale.x, wallAbility.recharge, wallIndicator.localScale.z);
-        punchIndicator.localScale = new Vector3(punchIndicator.localScale.x, punchAbility.recharge, punchIndicator.localScale.z);
-        dashIndicator.localScale = new Vector3(dashIndicator.localScale.x, dashAbility.recharge, dashIndicator.localScale.z);
-        stunIndicator.localScale = new Vector3(stunIndicator.localScale.x, stunAbility.recharge, stunIndicator.localScale.z);
+        windIndicator.localScale = new Vector3(windIndicator.localScale.x, 1 - windAbility.recharge, windIndicator.localScale.z);
+        wallIndicator.localScale = new Vector3(wallIndicator.localScale.x, 1 - wallAbility.recharge, wallIndicator.localScale.z);
+        punchIndicator.localScale = new Vector3(punchIndicator.localScale.x, 1 - punchAbility.recharge, punchIndicator.localScale.z);
+        dashIndicator.localScale = new Vector3(dashIndicator.localScale.x, 1 - dashAbility.recharge, dashIndicator.localScale.z);
+        stunIndicator.localScale = new Vector3(stunIndicator.localScale.x, 1 - stunAbility.recharge, stunIndicator.localScale.z);
 
         if (abilityIndex != 0)
         {

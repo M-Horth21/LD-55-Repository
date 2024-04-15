@@ -11,6 +11,8 @@ public class PunchAbility : IAbility
 
     PunchSettings settings;
 
+    Animator punchAnimator;
+
     private float _recharge;
     public float recharge {
         get
@@ -27,6 +29,17 @@ public class PunchAbility : IAbility
     bool recharging = false;
     bool active = false;
 
+    public PunchAbility(PunchSettings punchSettings, Animator punchAnimator)
+    {
+        this.punchAnimator = punchAnimator;
+        this.settings = punchSettings;
+
+        this.punchPrefab = punchSettings.punchPrefab;
+        this.rechargeTime = punchSettings.rechargeTime;
+        this.abilityTime = punchSettings.abilityTime;
+        _recharge = 1;
+        currRecharge = abilityTime;
+    }
     public PunchAbility(PunchSettings punchSettings)
     {
         this.settings = punchSettings;
@@ -36,8 +49,9 @@ public class PunchAbility : IAbility
         this.abilityTime = punchSettings.abilityTime;
         _recharge = 1;
         currRecharge = abilityTime;
-
     }
+
+
     public void Activate()
     {
         if (active) return;
@@ -47,6 +61,11 @@ public class PunchAbility : IAbility
         currRecharge = abilityTime;
 
         currPunch = GameObject.Instantiate(punchPrefab);
+
+        if(punchAnimator != null)
+        {
+            punchAnimator.SetBool("Punching", true);
+        }
 
         currPunch.GetComponentInChildren<PunchBehavior>().SetSettings(settings);
 
@@ -67,6 +86,10 @@ public class PunchAbility : IAbility
     }
     public void Deactivate()
     {
+        if (punchAnimator != null)
+        {
+            punchAnimator.SetBool("Punching", false);
+        }
         GameObject.Destroy(currPunch);
         currRecharge = (_recharge * rechargeTime);
         recharging = true;

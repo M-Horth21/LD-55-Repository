@@ -633,7 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 134267642}
     - target: {fileID: 1093321072101687930, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
       propertyPath: preference
-      value: 0.416
+      value: 0.964
       objectReference: {fileID: 0}
     - target: {fileID: 4177312822684521590, guid: b29ecbdaab40a544b8ee7cd227dac957, type: 3}
       propertyPath: playerTransform
