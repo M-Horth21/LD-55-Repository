@@ -27,6 +27,8 @@ public class LeaderboardWebRequests : Singleton<LeaderboardWebRequests>
 
     public static string RootApiUrl = "https://ludumdare55.azurewebsites.net/v1/leaderboard";
 
+    Guid _submissionGuid;
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     static void Init()
     {
@@ -45,6 +47,8 @@ public class LeaderboardWebRequests : Singleton<LeaderboardWebRequests>
     protected override void Awake()
     {
         base.Awake();
+
+        _submissionGuid = Guid.NewGuid();
     }
 
     /// <summary>
@@ -188,7 +192,7 @@ public class LeaderboardWebRequests : Singleton<LeaderboardWebRequests>
         // Create the leaderboard record.
         LeaderboardRecord submission = new()
         {
-            id = SystemInfo.deviceUniqueIdentifier,
+            id = _submissionGuid.ToString(),
             playerName = playerName,
             runTime = (ulong)_gameState.RunTime.TotalMilliseconds,
             badge = "",
