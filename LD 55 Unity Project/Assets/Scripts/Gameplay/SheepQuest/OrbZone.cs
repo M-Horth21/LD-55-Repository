@@ -11,17 +11,6 @@ public class OrbZone : MonoBehaviour
 
     [SerializeField] float timeToDestroyOrb = 3f;
 
-
-    IEnumerator OrbCountdown(Orb orb)
-    {
-        float timePassed = 0f;
-
-        while (timePassed <= timeToDestroyOrb)
-        {
-            timePassed += Time.deltaTime;
-            yield return null;
-        }
-    }
     private void OnTriggerStay(Collider other)
     {
         if ((orbLayer & (1 << other.gameObject.layer)) != 0)

@@ -227,9 +227,4 @@ public class AbilityController : MonoBehaviour
         currAbility.Deactivate();
         currAbility = new NullAbility();
     }
-
-    static int MathMod(int a, int b)
-    {
-        return (Math.Abs(a * b) + a) % b;
-    }
 }
