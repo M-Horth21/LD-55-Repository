@@ -1,14 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SheepQuestManager : MonoBehaviour
 {
+    public UnityEvent OnGameWin;
+    public UnityEvent OnGameLose;
 
     [SerializeField] List<GameObject> orbs;
     [SerializeField] Transform playerTransform;
     [SerializeField] GameObject lrPrefab;
+    [SerializeField] GameState _gameState;
+
+    [Scene]
+    [SerializeField]
+    string _lobbyScene;
 
     List<LineRenderer> lineRenderers = new();
 
@@ -26,9 +35,11 @@ public class SheepQuestManager : MonoBehaviour
 
     int origOrbCount;
     int orbsCaptured = 0;
+    bool _gameEnded = false;
+
     void Awake()
     {
-        foreach(GameObject orb in orbs)
+        foreach (GameObject orb in orbs)
         {
             GameObject obj = Instantiate(lrPrefab, transform);
             LineRenderer lr = obj.GetComponent<LineRenderer>();
@@ -42,7 +53,7 @@ public class SheepQuestManager : MonoBehaviour
 
     void Update()
     {
-        for(int i = 0; i < orbs.Count; i++)
+        for (int i = 0; i < orbs.Count; i++)
         {
             Vector3[] positions = new Vector3[2];
             positions[0] = playerTransform.position;
@@ -61,7 +72,7 @@ public class SheepQuestManager : MonoBehaviour
 
         orbs.Remove(orb);
 
-        foreach(LineRenderer lr in lineRenderers)
+        foreach (LineRenderer lr in lineRenderers)
         {
             lr.enabled = false;
         }
@@ -69,9 +80,10 @@ public class SheepQuestManager : MonoBehaviour
         orbsCaptured++;
         progressBar.value = orbsCaptured / (float)origOrbCount;
 
-        if(progressBar.value >= .98f)
+        if (!_gameEnded && progressBar.value >= .98f)
         {
             Debug.Log("You Win!");
+            Win();
         }
     }
     IEnumerator UpdateEnemyTarget()
@@ -83,17 +95,17 @@ public class SheepQuestManager : MonoBehaviour
             GameObject closestOrbObj = null;
             float minDist = Mathf.Infinity;
 
-            foreach(GameObject orb in orbs)
+            foreach (GameObject orb in orbs)
             {
                 float dist = (orb.transform.position - playerTransform.position).sqrMagnitude;
-                if(dist < minDist)
+                if (dist < minDist)
                 {
                     minDist = dist;
                     closestOrbObj = orb;
                 }
             }
 
-            if(closestOrbObj == null)
+            if (closestOrbObj == null)
             {
                 Debug.Log("you win I guess...?");
                 yield break;
@@ -101,12 +113,35 @@ public class SheepQuestManager : MonoBehaviour
             closestOrb = closestOrbObj.transform;
 
 
-            foreach(EnemyMovement enemyMovement in enemyMovements)
+            foreach (EnemyMovement enemyMovement in enemyMovements)
             {
                 enemyMovement.SetTarget(closestOrb);
             }
             enemyToTargetOrb.SetTarget(closestOrb);
             enemyToTargetOrbMovement.SetPlayer(closestOrb);
         }
+    }
+
+
+    public void Lose()
+    {
+        _gameEnded = true;
+        _gameState.EndActivePortal(false);
+        OnGameLose.Invoke();
+        StartCoroutine(DelayedSceneChange());
+    }
+
+    public void Win()
+    {
+        _gameEnded = true;
+        _gameState.EndActivePortal(true);
+        OnGameWin.Invoke();
+        StartCoroutine(DelayedSceneChange());
+    }
+
+    IEnumerator DelayedSceneChange()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(_lobbyScene);
     }
 }
