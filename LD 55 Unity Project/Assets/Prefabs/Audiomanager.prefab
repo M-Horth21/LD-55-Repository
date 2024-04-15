@@ -97,7 +97,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - soundName: EnemyStun
     soundClip: {fileID: 8300000, guid: ae40283a272bc4e4193718b3a06e891e, type: 3}
-    soundVolume: 1
+    soundVolume: 0.752
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}

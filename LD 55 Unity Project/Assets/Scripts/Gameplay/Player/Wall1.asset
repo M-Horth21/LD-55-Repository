@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rechargeTime: 4
   abilityTime: 1
-  wallDuration: 4
+  wallDuration: 6
   wallPrefab: {fileID: 4994144191811919893, guid: 7df8402b16db05d438e88ce2c66ce65c, type: 3}
   wallLayer:
     serializedVersion: 2

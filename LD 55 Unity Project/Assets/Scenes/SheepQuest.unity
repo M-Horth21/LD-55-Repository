@@ -2570,42 +2570,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
-      propertyPath: sounds.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
-      propertyPath: sounds.Array.data[11].soundClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 045c7dc399624234a941ae3a20d5601c, type: 3}
-    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
-      propertyPath: sounds.Array.data[11].soundName
-      value: EnemyPunchHit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
-      propertyPath: sounds.Array.data[12].soundClip
-      value: 
-      objectReference: {fileID: 8300000, guid: f1d886b92cd4d2b44892a514cc9b6570, type: 3}
-    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
-      propertyPath: sounds.Array.data[12].soundName
-      value: EnemyWhiff
-      objectReference: {fileID: 0}
-    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
-      propertyPath: sounds.Array.data[11].soundPitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
-      propertyPath: sounds.Array.data[12].soundPitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
-      propertyPath: sounds.Array.data[11].soundVolume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
-      propertyPath: sounds.Array.data[12].soundVolume
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
