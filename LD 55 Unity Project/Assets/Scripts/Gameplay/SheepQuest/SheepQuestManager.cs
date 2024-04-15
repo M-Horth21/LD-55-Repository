@@ -48,6 +48,8 @@ public class SheepQuestManager : MonoBehaviour
             positions[0] = playerTransform.position;
             positions[1] = orbs[i].transform.position;
 
+            lineRenderers[i].enabled = true;
+
             lineRenderers[i].SetPositions(positions);
         }
 
@@ -61,7 +63,7 @@ public class SheepQuestManager : MonoBehaviour
 
         foreach(LineRenderer lr in lineRenderers)
         {
-            lr.SetPositions(new Vector3[0]);
+            lr.enabled = false;
         }
 
         if(progressBar.value >= .98f)
