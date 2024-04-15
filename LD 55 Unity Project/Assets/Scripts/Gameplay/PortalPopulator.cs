@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PortalPopulator : MonoBehaviour
 {
+    public List<PentagramBehavior> Portals => _portals;
+
     [SerializeField]
     GameState _gameState;
 

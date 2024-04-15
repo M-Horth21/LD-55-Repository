@@ -8,6 +8,11 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float height;
     [SerializeField] private float followSpeed;
 
+    void Start()
+    {
+        transform.position = new Vector3(playerTransform.position.x, height, playerTransform.position.z);
+    }
+
     // Update is called once per frame
     void LateUpdate()
     {
