@@ -90,7 +90,6 @@ public class AbilityController : MonoBehaviour
         {
             case 1:
                 if (punchAbility.recharge < .99f) break;
-                Debug.Log($"Casting ability {abilityNumber}!");
                 currAbility.Deactivate();
                 currAbility = punchAbility;
                 currAbility.Activate();
@@ -98,7 +97,6 @@ public class AbilityController : MonoBehaviour
 
             case 2:
                 if (windAbility.recharge < .99f) break;
-                Debug.Log($"Casting ability {abilityNumber}!");
                 currAbility.Deactivate();
                 currAbility = windAbility;
                 currAbility.Activate();
@@ -106,14 +104,12 @@ public class AbilityController : MonoBehaviour
 
             case 3:
                 if (wallAbility.recharge < .99f) break;
-                Debug.Log($"Casting ability {abilityNumber}!");
                 currAbility.Deactivate();
                 currAbility = wallAbility;
                 currAbility.Activate();
                 break;
             case 4:
                 if (stunAbility.recharge < .99f) break;
-                Debug.Log($"Casting ability {abilityNumber}!");
                 currAbility.Deactivate();
                 currAbility = stunAbility;
                 currAbility.Activate();

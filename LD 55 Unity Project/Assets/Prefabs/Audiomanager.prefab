@@ -59,4 +59,10 @@ MonoBehaviour:
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
+  - soundName: WallBuild
+    soundClip: {fileID: 8300000, guid: d471ac8d7c8671149812ce521f1a9a72, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
   songs: []

@@ -22,7 +22,6 @@ public class WallBehavior : MonoBehaviour
 
     IEnumerator DestroyObj()
     {
-        Debug.Log("wall being destroyed");
         while (transform.position.y > -1.99f)
         {
             float yPos = Mathf.Lerp(transform.position.y, -2.5f, Time.deltaTime / shrinkTime);

@@ -19,6 +19,10 @@ public class PunchEnemy : MonoBehaviour
     private void Update()
     {
 
+        if(playerTransform == null)
+        {
+            return;
+        }
         if ((transform.position - playerTransform.position).magnitude < 2f && punchAbility.recharge > .99f)
         {
             punchAbility.Activate();
@@ -27,5 +31,10 @@ public class PunchEnemy : MonoBehaviour
         punchAbility.Logic(transform.position, transform.position + transform.forward);
 
         punchAbility.Tick();
+    }
+
+    public void SetTarget(Transform target)
+    {
+        playerTransform = target;
     }
 }

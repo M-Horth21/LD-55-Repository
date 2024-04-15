@@ -17,6 +17,12 @@ public class EnemyMovement : MonoBehaviour
         // 0 preference means the target pos is targeted. 1 means the player pos is targeted.
         Vector3 resultant;
 
+        // This will rarely happen but oh well =D
+        if(playerPos == null)
+        {
+            return;
+        }
+
         // If no target position is given, just go straight for the player.
         if(targetPos == null)
         {
@@ -29,10 +35,19 @@ public class EnemyMovement : MonoBehaviour
             target = targetPos.position + (preference * resultant);
         }
 
+
         Vector2 moveDir = new Vector2(target.x - transform.position.x, target.z - transform.position.z).normalized;
         _agentMotion.MotionInput = moveDir;
         _agentMotion.AimInput = playerPos.position;
 
+    }
+    public void SetPlayer(Transform target)
+    {
+        playerPos = target;
+    }
+    public void SetTarget(Transform target)
+    {
+        targetPos = target;
     }
 
     private void OnDrawGizmos()
