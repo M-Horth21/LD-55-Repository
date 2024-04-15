@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net.WebSockets;
+using UnityEditor.Playables;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Game State")]
@@ -22,7 +25,7 @@ public class GameState : ScriptableObject
 
     int _currentPortal = -1;
     List<int> _completedPortals = new();
-    Dictionary<AbilityType, int> _abilityRanks = new();
+    List<KeyValuePair<AbilityType, int>> _abilityRanks = new();
 
     DateTime _runStartTime;
     DateTime _runEndTime;
@@ -37,7 +40,7 @@ public class GameState : ScriptableObject
 
         foreach (AbilityType type in Enum.GetValues(typeof(AbilityType)))
         {
-            _abilityRanks.Add(type, 0);
+            _abilityRanks.Add(new KeyValuePair<AbilityType, int>(type, 0));
         }
 
         _runStartTime = DateTime.Now;
@@ -51,12 +54,29 @@ public class GameState : ScriptableObject
 
     public void EndActivePortal(bool successful)
     {
-        if (successful) _completedPortals.Add(_currentPortal);
+        if (successful)
+        {
+            LevelUpAbility();
+            _completedPortals.Add(_currentPortal);
+        }
     }
 
-    public int GetRankOfAbility(AbilityType ability) => _abilityRanks[ability];
+    public int GetRankOfAbility(AbilityType abilityType)
+    {
+        var (ability, rank) = _abilityRanks.FirstOrDefault(x => x.Key == abilityType);
+        Debug.Log($"{abilityType} ability is rank {rank}");
+        return rank;
+    }
 
-    public void LevelUpAbility(AbilityType ability) => _abilityRanks[ability]++;
+    public void LevelUpAbility()
+    {
+        var indexToLevel = NumberOfCompletedPortals % _abilityRanks.Count;
+        var (ability, rank) = _abilityRanks[indexToLevel];
+        var newPair = new KeyValuePair<AbilityType, int>(ability, ++rank);
+        _abilityRanks[indexToLevel] = newPair;
+
+        Debug.Log($"Leveled up {ability} to {rank}");
+    }
 
     public void CompleteRun() => _runEndTime = DateTime.Now;
 
