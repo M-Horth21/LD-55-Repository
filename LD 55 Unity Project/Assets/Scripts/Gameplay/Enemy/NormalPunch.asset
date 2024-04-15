@@ -9,13 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b830e45a1e9ba694c9134f7a15303cc6, type: 3}
-  m_Name: EasyWind
+  m_Script: {fileID: 11500000, guid: 0ee7ee9d0d0bf4048975365b42c6a04f, type: 3}
+  m_Name: NormalPunch
   m_EditorClassIdentifier: 
   affectedLayers:
     serializedVersion: 2
-    m_Bits: 128
-  rechargeTime: 3
-  abilityTime: 2
-  windStrength: 1.72
-  windPrefab: {fileID: 6184427015966422511, guid: a5cc0c284ea24564b90f5e8f355deb05, type: 3}
+    m_Bits: 640
+  punchStrength: 60.1
+  rechargeTime: 1
+  abilityTime: 0.2
+  punchPrefab: {fileID: 6835695426502109037, guid: 36b4ef0d0fab734439989156adef8cb4, type: 3}
+  punchWhif: EnemyWhiff
+  punchHit: EnemyPunchHit

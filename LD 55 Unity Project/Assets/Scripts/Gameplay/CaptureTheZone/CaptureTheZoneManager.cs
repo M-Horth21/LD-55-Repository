@@ -27,10 +27,25 @@ public class CaptureTheZoneManager : MonoBehaviour
     bool _gameEnded = false;
 
 
+    [SerializeField]
+    List<GameObject> _mediumEnemies;
+
+
     private void Awake()
     {
         zoneMat = zone.GetComponent<Renderer>().material;
+
+
+        if (_gameState.CurrentDifficulty == DifficultySetting.Medium)
+        {
+            foreach (var enemy in _mediumEnemies)
+            {
+                enemy.SetActive(true);
+            }
+
+        }
     }
+
     void Update()
     {
         if (inZone)

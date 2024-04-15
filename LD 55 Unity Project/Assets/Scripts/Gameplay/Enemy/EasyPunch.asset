@@ -15,7 +15,7 @@ MonoBehaviour:
   affectedLayers:
     serializedVersion: 2
     m_Bits: 640
-  punchStrength: 60.1
+  punchStrength: 41.5
   rechargeTime: 1
   abilityTime: 0.2
   punchPrefab: {fileID: 6835695426502109037, guid: 36b4ef0d0fab734439989156adef8cb4, type: 3}

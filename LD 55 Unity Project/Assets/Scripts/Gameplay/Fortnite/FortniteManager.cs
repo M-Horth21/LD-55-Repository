@@ -23,8 +23,6 @@ public class FortniteManager : MonoBehaviour
     [SerializeField]
     List<GameObject> _mediumEnemies;
 
-    [SerializeField]
-    List<GameObject> _hardEnemies;
 
     private void Awake()
     {
@@ -33,19 +31,10 @@ public class FortniteManager : MonoBehaviour
             foreach (var enemy in _mediumEnemies)
             {
                 enemy.SetActive(true);
+                enemies.Add(enemy);
             }
 
         }
-
-        if (_gameState.CurrentDifficulty == DifficultySetting.Hard)
-        {
-            foreach (var enemy in _hardEnemies)
-            {
-                enemy.SetActive(true);
-            }
-        }
-
-
     }
 
     void Start()
