@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class SheepQuestManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] List<GameObject> orbs;
+    [SerializeField] Transform playerTransform;
+    [SerializeField] GameObject lrPrefab;
+
+    List<LineRenderer> lineRenderers = new();
+
+
+    void Awake()
     {
-        
+        foreach(GameObject orb in orbs)
+        {
+            GameObject obj = Instantiate(lrPrefab, transform);
+            LineRenderer lr = obj.GetComponent<LineRenderer>();
+            lineRenderers.Add(lr);
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        for(int i = 0; i < orbs.Count; i++)
+        {
+            Vector3[] positions = new Vector3[2];
+            positions[0] = playerTransform.position;
+            positions[1] = orbs[i].transform.position;
+
+            lineRenderers[i].SetPositions(positions);
+        }
     }
 }
