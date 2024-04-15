@@ -556,15 +556,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Super Fun Summoning Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4e7dcef97b0b37d4bb4e828620b670a1, type: 2}
+  m_sharedMaterial: {fileID: 7667795131355704004, guid: 4e7dcef97b0b37d4bb4e828620b670a1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285164196
-  m_fontColor: {r: 0.6415094, g: 0.41456032, b: 0.41456032, a: 1}
+    rgba: 4292344063
+  m_fontColor: {r: 1, g: 0.97400045, b: 0.8443396, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

@@ -215,7 +215,7 @@ public class AbilityController : MonoBehaviour
 
         abilityIndex = ability;
 
-        selectionHover.transform.position = abilityPositions[ability - 1].position;
+        selectionHover.position = abilityPositions[ability - 1].position;
     }
 
     private void OnEnable()
