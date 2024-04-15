@@ -11,7 +11,7 @@ public class MiniGameHintDisplayer : MonoBehaviour
     void Start()
     {
         _hintPanel.SetActive(true);
-        StartCoroutine(HidePanelDelayed());
+        //StartCoroutine(HidePanelDelayed());
     }
 
     IEnumerator HidePanelDelayed()
