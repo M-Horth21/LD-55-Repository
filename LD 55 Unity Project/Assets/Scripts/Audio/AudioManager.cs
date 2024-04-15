@@ -43,7 +43,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-
     #region Sounds
     public void PlaySound(string soundName)
     {
@@ -95,18 +94,6 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Stop();
     }
-
-    private void Pause(string songName, float percentVolume)
-    {
-        Song s = Array.Find(songs, song => song.songName == songName);
-        if (s == null)
-        {
-            Debug.LogWarning("Song: " + songName + " not found.");
-            return;
-        }
-        s.source.volume = s.source.volume * percentVolume;
-    }
-
     public void MusicVolume(float percentVolume)
     {
         foreach (Song s in songs)
