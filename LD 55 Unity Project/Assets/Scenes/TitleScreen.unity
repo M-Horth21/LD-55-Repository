@@ -800,7 +800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b060e6e706855c6448faa798b0dd2db5, type: 2}
   m_sharedMaterial: {fileID: 3941165469146135526, guid: b060e6e706855c6448faa798b0dd2db5, type: 2}
@@ -809,8 +809,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292467161
-  m_fontColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -957,6 +957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1787465695}
   - component: {fileID: 1787465694}
+  - component: {fileID: 1787465696}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -1040,6 +1041,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1787465696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787465693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83662be034e7e274ab96c00bb42d3f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseDuration: 1.65
+  minIntensity: 2.6
+  maxIntensity: 5
 --- !u!1 &1799281810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,8 +1228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 690, y: -128}
-  m_SizeDelta: {x: 183.564, y: 80}
+  m_AnchoredPosition: {x: 628.175, y: -141.072}
+  m_SizeDelta: {x: 251.921, y: 125.853}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807977691
 MonoBehaviour:
@@ -1237,7 +1253,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1299,7 +1315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1079733490, guid: 587c659a75a4ef64baed19a42181e0ab, type: 3}
+  m_Sprite: {fileID: -2070918126, guid: 7ce51489a9a8ee14dbdd987b37e86f51, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
