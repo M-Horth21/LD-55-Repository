@@ -556,8 +556,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Super Fun Summoning Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4e7dcef97b0b37d4bb4e828620b670a1, type: 2}
-  m_sharedMaterial: {fileID: 7667795131355704004, guid: 4e7dcef97b0b37d4bb4e828620b670a1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 14e39bc0e897d764fb2e45718df5c4a7, type: 2}
+  m_sharedMaterial: {fileID: -657428697876470531, guid: 14e39bc0e897d764fb2e45718df5c4a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -769,6 +769,147 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599113358}
   m_CullTransparentMesh: 1
+--- !u!1001 &1660134672
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1600110609524285057, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_Name
+      value: Audiomanager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087523634160087517, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.6738415
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087523634160087517, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -23.13316
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087523634160087517, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.795057
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087523634160087517, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087523634160087517, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087523634160087517, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087523634160087517, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087523634160087517, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087523634160087517, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087523634160087517, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[0].songClip
+      value: 
+      objectReference: {fileID: 8300000, guid: afe59e947b1775045ac6700919a939be, type: 3}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[0].songName
+      value: MenuTheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[1].songClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9014c0640d5290b44b6139cf4db31533, type: 3}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[1].songName
+      value: BattleTheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[2].songClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c370372cf66875e45ad86ec5e690d542, type: 3}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[2].songName
+      value: VictoryTheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[0].isLooping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[0].songPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[1].isLooping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[1].songPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[2].isLooping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[2].songPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[0].songVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[1].songVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: songs.Array.data[2].songVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[3].soundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d471ac8d7c8671149812ce521f1a9a72, type: 3}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[3].soundName
+      value: MenuTheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[3].soundPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774244947070816829, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
+      propertyPath: sounds.Array.data[3].soundVolume
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b69e8d8f0da08a45a6c3e533cbca062, type: 3}
 --- !u!1 &1807977689
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,3 +1097,4 @@ SceneRoots:
   - {fileID: 243607391}
   - {fileID: 570418481}
   - {fileID: 1853597856}
+  - {fileID: 1660134672}
