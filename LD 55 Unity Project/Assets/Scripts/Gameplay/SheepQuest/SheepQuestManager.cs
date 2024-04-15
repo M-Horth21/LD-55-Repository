@@ -19,6 +19,10 @@ public class SheepQuestManager : MonoBehaviour
     [SerializeField]
     string _lobbyScene;
 
+    [Scene]
+    [SerializeField]
+    string _winScene;
+
     List<LineRenderer> lineRenderers = new();
 
     [SerializeField] List<EnemyMovement> enemyMovements;
@@ -29,6 +33,17 @@ public class SheepQuestManager : MonoBehaviour
     [SerializeField] PunchEnemy enemyToTargetOrb;
     [SerializeField] EnemyMovement enemyToTargetOrbMovement;
 
+    [SerializeField]
+    List<GameObject> _mediumEnemies;
+
+    [SerializeField]
+    List<GameObject> _mediumOrbs;
+
+    [SerializeField]
+    List<GameObject> _hardEnemies;
+
+    [SerializeField]
+    List<GameObject> _hardOrbs;
 
     [Header("UI Stuff")]
     [SerializeField] Slider progressBar;
@@ -39,6 +54,34 @@ public class SheepQuestManager : MonoBehaviour
 
     void Awake()
     {
+        if (_gameState.CurrentDifficulty == DifficultySetting.Medium)
+        {
+            foreach (var enemy in _mediumEnemies)
+            {
+                enemy.SetActive(true);
+            }
+
+            foreach (var orb in _mediumOrbs)
+            {
+                orb.SetActive(true);
+                orbs.Add(orb);
+            }
+        }
+
+        if (_gameState.CurrentDifficulty == DifficultySetting.Hard)
+        {
+            foreach (var enemy in _hardEnemies)
+            {
+                enemy.SetActive(true);
+            }
+
+            foreach (var orb in _hardOrbs)
+            {
+                orb.SetActive(true);
+                orbs.Add(orb);
+            }
+        }
+
         foreach (GameObject orb in orbs)
         {
             GameObject obj = Instantiate(lrPrefab, transform);
@@ -144,6 +187,9 @@ public class SheepQuestManager : MonoBehaviour
     IEnumerator DelayedSceneChange()
     {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(_lobbyScene);
+
+        var sceneTarget = _gameState.CurrentDifficulty == DifficultySetting.Hard ?
+            _winScene : _lobbyScene;
+        SceneManager.LoadScene(sceneTarget);
     }
 }
