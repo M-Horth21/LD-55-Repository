@@ -18,6 +18,6 @@ public class MiniGameCompleteCanvasController : MonoBehaviour
     public void ShowPanel(bool success)
     {
         _panel.SetActive(true);
-        _resultText.text = success ? "You've completed this portal" : "You lost... try again";
+        _resultText.text = success ? "You've completed this ritual" : "You lost... try again";
     }
 }

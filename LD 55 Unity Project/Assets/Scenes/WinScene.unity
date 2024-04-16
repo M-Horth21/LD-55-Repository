@@ -1456,7 +1456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Portals completed
+  m_text: Rituals completed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b060e6e706855c6448faa798b0dd2db5, type: 2}
   m_sharedMaterial: {fileID: 3941165469146135526, guid: b060e6e706855c6448faa798b0dd2db5, type: 2}

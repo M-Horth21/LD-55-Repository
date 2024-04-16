@@ -18,6 +18,6 @@ public class LeaderboardRecordDisplayer : MonoBehaviour
     {
         _nameText.text = record.playerName;
         _runTimeText.text = TimeFormatter.GetTimeString(record.runTime);
-        _portalsText.text = $"{record.portalsCompleted}/11 portals";
+        _portalsText.text = $"{record.portalsCompleted}/11 rituals";
     }
 }

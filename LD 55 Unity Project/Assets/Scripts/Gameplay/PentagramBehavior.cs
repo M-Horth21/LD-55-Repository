@@ -32,7 +32,7 @@ public partial class PentagramBehavior : MonoBehaviour
 
     private void Awake()
     {
-        _tipText.text = $"Entering {_difficulty} level";
+        _tipText.text = $"Entering {_difficulty} ritual";
         _tipCanvas.SetActive(false);
     }
 

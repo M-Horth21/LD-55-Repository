@@ -18,6 +18,6 @@ public class LobbyProgressDisplayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _text.text = $"{_gameState.NumberOfCompletedPortals}/11 portals completed";
+        _text.text = $"{_gameState.NumberOfCompletedPortals}/11 rituals completed";
     }
 }
